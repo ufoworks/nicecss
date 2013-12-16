@@ -2,6 +2,14 @@
     $EXTEND PURE GRID
 \*------------------------------------*/
 /**
+ * Default font in grids for avoid inline-block hack side effects
+ */
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    font-family: $base-font-family;
+}
+
+/**
  * Grid with gutter
  */
 .pure-g-g 		{ margin:0; padding:0; margin-left: $gutter * -1; }
@@ -12,6 +20,12 @@
  */
 .pure-g-gdouble 		{ margin:0; padding:0; margin-left: $gutter * -2; }
 .pure-g-gdouble > * 	{ padding-left: $gutter * 2; }
+
+/**
+ * Grid with middle gutter
+ */
+.pure-g-gmiddle 		{ margin:0; padding:0; margin-left: -($gutter / 2); }
+.pure-g-gmiddle > * 	{ padding-left: $gutter / 2; }
 
 
 /**
