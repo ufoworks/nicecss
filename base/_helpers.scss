@@ -25,11 +25,12 @@
 .weight--light      { font-weight:300!important; }
 .weight--normal     { font-weight:400!important; }
 .weight--semibold   { font-weight:600!important; }
+.weight--bold   	{ font-weight:700!important; }
 
 /**
 * Font styled
 */
-.text--unitalic { font-style: normal!important; }
+.text--unitalic 	{ font-style: normal!important; }
 
 
 /**
@@ -58,7 +59,7 @@
 * Visibility
 */
 
-.invisible      { visually: hidden!important; }
+.invisible      { visibility: hidden!important; }
 .transparent    { @include opacity(0); }
 .mask           { overflow: hidden; }
 .hide           { display: none; }
