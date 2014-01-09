@@ -1,15 +1,7 @@
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
-/**
- * Create a fully formed type style (sizing and vertical rhythm) by passing in a
- * single value, e.g.:
- *
-   `@include font-size(10px);`
- *
- * Thanks to @redclov3r for the `line-height` Sass:
- * twitter.com/redclov3r/status/250301539321798657
- */
+
 @mixin font-size($font-size, $line-height:true){
     font-size:$font-size;
     font-size:($font-size / $base-font-size)*1rem;
@@ -18,14 +10,6 @@
     }
 }
 
-
-
-/**
- * Create vendor-prefixed CSS in one go, e.g.
- *
-   `@include vendor(border-radius, 4px);`
- *
- */
 @mixin vendor($property, $value...){
     -webkit-#{$property}:$value;
        -moz-#{$property}:$value;
@@ -34,14 +18,6 @@
             #{$property}:$value;
 }
 
-
-/**
- * Force overly long spans of text to truncate, e.g.:
- *
-   `@include truncate(100%);`
- *
- * Where `$truncation-boundary` is a united measurement.
- */
 @mixin truncate($truncation-boundary){
     max-width:$truncation-boundary;
     white-space:nowrap;
@@ -50,28 +26,19 @@
 }
 
 
+@mixin respond-to($media){
+  @each $breakpoint in $breakpoints{
+      $name: nth($breakpoint, 1);
+      $declaration: nth($breakpoint, 2);
 
-/**
- * Respond mixin
- */
-
- @mixin respond-to($media){
-    @each $breakpoint in $breakpoints{
-        $name: nth($breakpoint, 1);
-        $declaration: nth($breakpoint, 2);
-
-        @if $media == $name and $declaration{
-            @media only screen and #{$declaration}{
-                @content;
-            }
-        }
-    }
+      @if $media == $name and $declaration{
+          @media only screen and #{$declaration}{
+              @content;
+          }
+      }
+  }
  }
 
-@mixin plain{
-    margin: 0;
-    padding: 0;
-}
 
 @mixin opacity ( $value: 0.5 ) {
   opacity: $value;
@@ -80,6 +47,7 @@
   zoom: 1;
 }
 
+
 @mixin border-rounded ($value: 5px) {
     @include border-top-radius($value);
     @include border-bottom-radius($value);
@@ -87,11 +55,13 @@
     @include border-right-radius($value);
 }
 
+
 @mixin box-shadow($top, $left, $blur, $color, $inset:"") {
     -webkit-box-shadow:$top $left $blur $color #{$inset};
     -moz-box-shadow:$top $left $blur $color #{$inset};
     box-shadow:$top $left $blur $color #{$inset};
 }
+
 
 @mixin box-emboss($opacity, $opacity2){
     box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
