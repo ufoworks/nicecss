@@ -26,6 +26,7 @@
 [class*= 'cell--'] {
   padding-left: $gutter;
   float: left;
+  width: 100%;
 }
 
 [class*= 'cell--']:last-of-type {
