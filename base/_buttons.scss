@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+
+/**
+ * Base button
+ */
+
+.button {
+	display: inline-block;
+	line-height: normal;
+	white-space: nowrap;
+	vertical-align: baseline;
+	text-align: center;
+	cursor: pointer;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding: 0.5em 1.5em;
+	color: $base-text-color;
+	background-color: $base-ui-color;
+	text-decoration: none;
+	border-radius: $brand-round;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+	background-color: darken($base-ui-color,20%);
+	outline: 0;
+}
+
+/**
+ * Button sizes
+ */
+
+.button--small {
+	font-size: 75%;
+}
+.button--big {
+	font-size: 125%;
+}

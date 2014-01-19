@@ -5,12 +5,8 @@ module.exports = function(grunt) {
     watch: {
       dev: {
         files: [
-          'source/**/*.js',
-          'source/scss/**/*.scss',
-          'source/*.html',
-          'source/**/*.html',
-          'source/**/*.php',
-          'source/biografias/**'
+          '**/*.scss',
+          '**/*.html'
         ],
         tasks: ['dev'],
         options: {
@@ -22,7 +18,7 @@ module.exports = function(grunt) {
     sass:{
       dev: {
         files:{
-          'test/css/main.css':'nicepure.scss'
+          'test/css/main.css':'nicecss.scss'
         }
       }
     }
