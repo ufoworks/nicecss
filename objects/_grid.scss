@@ -29,14 +29,28 @@
   width: 100%;
 }
 
-[class*= 'cell--']:last-of-type {
-  float: right;
-}
+// [class*= 'cell--']:last-of-type {
+//   float: right;
+// }
 
 .grid--full {
   margin-left: 0;
   [class*= 'cell--']{
     padding-left: 0;
+  }
+}
+
+.grid--wide {
+  margin-left: $gutter * -2;
+  [class*= 'cell--']{
+    padding-left: $gutter * 2;
+  }
+}
+
+.grid--narrow {
+  margin-left: -($gutter / 2);
+  [class*= 'cell--']{
+    padding-left: $gutter / 2;
   }
 }
 
