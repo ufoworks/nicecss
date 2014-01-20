@@ -25,7 +25,6 @@
     text-overflow:ellipsis;
 }
 
-
 @mixin respond-to($media){
   @each $breakpoint in $breakpoints{
       $name: nth($breakpoint, 1);
@@ -39,14 +38,12 @@
   }
  }
 
-
 @mixin opacity ( $value: 0.5 ) {
   opacity: $value;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" $value * 100 ")";
   filter: alpha(opacity= $value * 100 );
   zoom: 1;
 }
-
 
 @mixin border-rounded ($value: 5px) {
     @include border-top-radius($value);
@@ -55,14 +52,58 @@
     @include border-right-radius($value);
 }
 
-
 @mixin box-shadow($top, $left, $blur, $color, $inset:"") {
     -webkit-box-shadow:$top $left $blur $color #{$inset};
     -moz-box-shadow:$top $left $blur $color #{$inset};
     box-shadow:$top $left $blur $color #{$inset};
 }
 
-
 @mixin box-emboss($opacity, $opacity2){
     box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+// Use: @include transition(color .3s ease);
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/* Example:
+* @include keyframes(slide-down) {
+*  0% { opacity: 1; }
+*  90% { opacity: 0; }
+* }
+
+* .element {
+*   @include animation('slide-down 5s 3');
+* }
+*/
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }  
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }  
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
 }
