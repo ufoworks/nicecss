@@ -69,6 +69,18 @@
 .hide           { display: none; }
 
 /**
+* Clearfix
+*/
+
+.clearfix {
+	&:after{
+	  content: "";
+	  display: table;
+	  clear: both
+	}
+}
+
+/**
  * Add/remove margins
  */
 .push           { margin:       $base-spacing-unit!important; }
