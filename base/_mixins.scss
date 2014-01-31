@@ -25,6 +25,12 @@
     text-overflow:ellipsis;
 }
 
+@mixin hide-text{
+    overflow:hidden;
+    text-indent:-9000px;
+    display:block;
+}
+
 @mixin respond-to($media){
   @each $breakpoint in $breakpoints{
       $name: nth($breakpoint, 1);
@@ -134,4 +140,19 @@
   -ms-animation: #{$str};
   -o-animation: #{$str};
   animation: #{$str};      
+}
+
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
+         url('#{$file-path}.woff')                     format('woff'),
+         url('#{$file-path}.ttf')                      format('truetype'),
+         url('#{$file-path}.svg##{$font-family}')      format('svg');
+  }
 }
