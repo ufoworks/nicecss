@@ -3,6 +3,7 @@
 \*------------------------------------*/
  
  // Base Form styles
+%niceform,
 .niceform {
 	input,
 	select,
@@ -48,6 +49,7 @@
 }
 
 // Stacked form
+%niceform--stack,
 .niceform--stack {
 	input, 
 	label,
@@ -70,6 +72,7 @@
 }
 
 // Aligned form
+%niceform--aligned,
 .niceform--aligned {
 	.niceform__group {
 		display: block;
@@ -99,6 +102,7 @@
 }
 
 // Rounded on input
+%niceform--rounded,
 .niceform--rounded {
 	input,
 	select,
@@ -114,6 +118,7 @@
 //		<label for="sample">Sample</label>
 // </div>
 
+%checkbox--nice,
 .checkbox--nice {
 	input[type=checkbox]{
 		display: none;
@@ -155,6 +160,7 @@
 //		<input type="radio" id="sample" name="sample">
 //		<label for="sample">Sample</label>
 // </div>
+%radio--nice,
 .radio--nice {
 	input[type=radio] {  
 	    display: none;  

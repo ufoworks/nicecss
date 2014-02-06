@@ -1,11 +1,11 @@
-/*------------------------------------*\
-    $BUTTONS
-\*------------------------------------*/
+// ################################### //
+// ########### BUTTONS ############### //
+// ################################### //
 
 /**
  * Base button
  */
-
+%button,
 .button {
 	display: inline-block;
 	line-height: normal;
@@ -23,22 +23,25 @@
 	background-color: $base-ui-color;
 	text-decoration: none;
 	border-radius: $brand-round;
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($base-ui-color,20%);
+		outline: 0;
+	}
 }
 
-.button:hover,
-.button:focus,
-.button:active {
-	background-color: darken($base-ui-color,20%);
-	outline: 0;
-}
 
 /**
  * Button sizes
  */
 
+%button--small,
 .button--small {
 	font-size: 75%;
 }
+
+%button--big,
 .button--big {
 	font-size: 125%;
 }
