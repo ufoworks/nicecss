@@ -10,6 +10,24 @@
     }
 }
 
+@mixin rem-space($property, $values) {
+  $resultPx: ();
+  $resultRem: ();
+  @each $value in $values {
+    $unitPx: px;
+    $unitRem: rem;
+    @if $value == 0 {
+      $unitPx: 0;
+      $unitRem: 0;
+    }
+    $resultPx: append($resultPx, ($value * parseInt($base-spacing-unit)) + $unitPx);
+    $resultRem: append($resultRem, ($value * parseInt($base-spacing-unit) / parseInt($base-font-size)) + $unitRem);
+  }
+  #{$property}: $resultPx;
+  #{$property}: $resultRem;
+}
+
+
 @mixin vendor($property, $value...){
     -webkit-#{$property}:$value;
        -moz-#{$property}:$value;
