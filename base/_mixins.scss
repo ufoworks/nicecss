@@ -13,15 +13,19 @@
 @mixin rem-space($property, $values) {
   $resultPx: ();
   $resultRem: ();
+  $valuePx: 0;
+  $valueRem: 0;
   @each $value in $values {
-    $unitPx: px;
-    $unitRem: rem;
-    @if $value == 0 {
-      $unitPx: 0;
-      $unitRem: 0;
+    @if $value == auto or $value == 0 {
+      $valuePx: $value;
+      $valueRem: $value;
+    } @else {
+      $valuePx: ($value * parseInt($base-spacing-unit)) + px;
+      $valueRem: ($value * parseInt($base-spacing-unit) / parseInt($base-font-size)) + rem;
     }
-    $resultPx: append($resultPx, ($value * parseInt($base-spacing-unit)) + $unitPx);
-    $resultRem: append($resultRem, ($value * parseInt($base-spacing-unit) / parseInt($base-font-size)) + $unitRem);
+    $resultPx: append($resultPx, $valuePx);
+    $resultRem: append($resultRem, $valueRem);
+    
   }
   #{$property}: $resultPx;
   #{$property}: $resultRem;
