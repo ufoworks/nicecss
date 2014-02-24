@@ -80,11 +80,12 @@ body {
    ========================================================================== */
 
 /*
- * Address `outline` inconsistency between Chrome and other browsers.
+ * Remove outline
  */
 
 a:focus {
-    outline: thin dotted;
+  outline: none;
+  -moz-outline-style: none;
 }
 
 /*
@@ -95,6 +96,7 @@ a:active,
 a:hover {
     outline: 0;
 }
+
 
 /* ==========================================================================
    Typography
