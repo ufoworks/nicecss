@@ -10,11 +10,12 @@
     }
 }
 
-@mixin rem-space($property, $values) {
+@mixin rem-space($property, $values, $isImportant:false) {
   $resultPx: ();
   $resultRem: ();
   $valuePx: 0;
   $valueRem: 0;
+  $important: '';
   @each $value in $values {
     @if $value == auto or $value == 0 {
       $valuePx: $value;
@@ -27,8 +28,11 @@
     $resultRem: append($resultRem, $valueRem);
     
   }
-  #{$property}: $resultPx;
-  #{$property}: $resultRem;
+  @if $isImportant == true {
+    $important: '!important';
+  }
+  #{$property}: $resultPx #{$important};
+  #{$property}: $resultRem #{$important};
 }
 
 
