@@ -1,0 +1,19 @@
+/* ====== media ====== */
+.media { 
+	$gutter: 10px;
+	//margin:10px; 
+	.body {
+		overflow: hidden;
+	}
+	.image {
+		float: left;
+		margin-right: $gutter;
+		img {
+			display: block;
+		}
+		.media--right & {
+			float: right;
+			margin-left: $gutter;
+		}
+	}
+}
