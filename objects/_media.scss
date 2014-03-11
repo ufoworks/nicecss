@@ -1,19 +1,19 @@
 /* ====== media ====== */
 .media { 
-	$gutter: 10px;
+	$media-margin: 10px;
 	//margin:10px; 
-	.body {
+	.media__body {
 		overflow: hidden;
 	}
-	.image {
+	.media__image {
 		float: left;
-		margin-right: $gutter;
+		margin-right: $media-margin;
 		img {
 			display: block;
 		}
 		.media--right & {
 			float: right;
-			margin-left: $gutter;
+			margin-left: $media-margin;
 		}
 	}
 }

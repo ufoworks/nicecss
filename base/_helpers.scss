@@ -27,10 +27,10 @@
  * Font weights
  */
 
-%weight--light, .weight--light      	{ font-weight:300!important; }
-%weight--normal, .weight--normal     	{ font-weight:400!important; }
-%weight--semibold, .weight--semibold   	{ font-weight:600!important; }
-%weight--bold, .weight--bold   			{ font-weight:700!important; }
+.weight--light      	{ font-weight:300!important; }
+.weight--normal     	{ font-weight:400!important; }
+.weight--semibold   	{ font-weight:600!important; }
+.weight--bold   		{ font-weight:700!important; }
 
 /**
 * Font styled
@@ -97,7 +97,7 @@
 .push--ends     	{ margin-top:   $base-spacing-unit!important; margin-bottom:$base-spacing-unit!important; }
 .push--sides    	{ margin-right: $base-spacing-unit!important; margin-left:  $base-spacing-unit!important; }
 
-.push-half          		{ margin:       $half-spacing-unit!important; }
+.push-half          	{ margin:       $half-spacing-unit!important; }
 .push-half--top     	{ margin-top:   $half-spacing-unit!important; }
 .push-half--right   	{ margin-right: $half-spacing-unit!important; }
 .push-half--bottom 		{ margin-bottom:$half-spacing-unit!important; }

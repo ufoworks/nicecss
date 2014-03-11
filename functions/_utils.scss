@@ -1,0 +1,3 @@
+@function parseInt($value) {
+	@return $value / 1px;
+}
