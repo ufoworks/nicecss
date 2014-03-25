@@ -110,7 +110,7 @@
   $total-columns: nth($span, 3);
   $size: nth($span, 1);
   $remaining-width: 100% -  gutter-fix-to-percent($gutter) * ($total-columns - 1);
-  width: #{$remaining-width / ($total-columns / $size)}% !important;
+  width: #{$remaining-width / ($total-columns / $size) + (($size - 1) * gutter-fix-to-percent($gutter))}% !important;
 }
 
 @mixin fgrid-cover($index:auto) {

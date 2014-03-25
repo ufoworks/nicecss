@@ -1,11 +1,11 @@
 /* ====== media ====== */
 .media { 
 	$media-margin: 10px;
-	//margin:10px; 
-	.media__body {
+	@extend %clearfix;
+	&__body {
 		overflow: hidden;
 	}
-	.media__image {
+	&__image {
 		float: left;
 		margin-right: $media-margin;
 		img {
@@ -14,6 +14,13 @@
 		.media--right & {
 			float: right;
 			margin-left: $media-margin;
+			margin-right: 0;
+		}
+		.media--wide & {
+			margin-right: $media-margin * 3;
+		}
+		.media--wide.media--right & {
+			margin-left: $media-margin * 3;
 		}
 	}
 }
