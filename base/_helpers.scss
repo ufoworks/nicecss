@@ -158,3 +158,15 @@
 .hard--ends     	{ padding-top:   0!important; padding-bottom:0!important; }
 .hard--sides    	{ padding-right: 0!important; padding-left:  0!important; }
 
+
+// Responsive visible helpers
+@each $breakpoint in $breakpoints {
+	$name: nth($breakpoint, 1);
+	.visible--#{$name} {
+		display: none;
+		@include respond-to($name) {
+			display: block;
+		}
+	}
+}
+
