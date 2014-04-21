@@ -1,37 +1,43 @@
-/*------------------------------------*\
-    $HEADINGS
-\*------------------------------------*/
+/* 
+------------------------------------------------
+HEADINGS
+------------------------------------------------
+*/
 
-h1,.tam1, %tam1 {
-    @include font-size($h1-size);
-}
-h2,.tam2, %tam2 {
-    @include font-size($h2-size);
-}
-h3,.tam3, %tam3 {
-    @include font-size($h3-size);
-}
-h4,.tam4, %tam4 {
-    @include font-size($h4-size);
-}
-h5,.tam5, %tam5 {
-    @include font-size($h5-size);
-}
-h6,.tam6, %tam6 {
-    @include font-size($h6-size);
-}
-.giga, %giga {
-    @include font-size($giga-size);
-}
-.mega, %mega {
-    @include font-size($mega-size);
-}
-.kilo, %kilo {
-    @include font-size($kilo-size);
-}
-.milli, %milli {
-    @include font-size($milli-size);   
-}
-.micro, %micro {
-    @include font-size($micro-size);
+@if $use-headings {
+
+    h1,.tam1, %tam1 {
+        @include font-size($h1-size);
+    }
+    h2,.tam2, %tam2 {
+        @include font-size($h2-size);
+    }
+    h3,.tam3, %tam3 {
+        @include font-size($h3-size);
+    }
+    h4,.tam4, %tam4 {
+        @include font-size($h4-size);
+    }
+    h5,.tam5, %tam5 {
+        @include font-size($h5-size);
+    }
+    h6,.tam6, %tam6 {
+        @include font-size($h6-size);
+    }
+    .giga, %giga {
+        @include font-size($giga-size);
+    }
+    .mega, %mega {
+        @include font-size($mega-size);
+    }
+    .kilo, %kilo {
+        @include font-size($kilo-size);
+    }
+    .milli, %milli {
+        @include font-size($milli-size);   
+    }
+    .micro, %micro {
+        @include font-size($micro-size);
+    }
+    
 }

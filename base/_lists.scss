@@ -1,30 +1,37 @@
-/*------------------------------------*\
-    $NICE LISTS
-\*------------------------------------*/
-%list,
-.list {
-	padding: 0;
-	margin: 0;
-	& > li{
-		margin-left: 0.3em;
-	}
-	& > li:first-child{
-		margin-left: 0;
-	}
-}
+/* 
+------------------------------------------------
+LISTS
+------------------------------------------------
+*/
 
-%list--unstyled,
-.list--unstyled {
-	list-style:none;
-}
+@if $use-lists {
 
-%list--inline,
-.list--inline {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	& > li{
-	  display: inline-block;
+	%list,
+	.list {
+		padding: 0;
+		margin: 0;
+		& > li{
+			margin-left: 0.3em;
+		}
+		& > li:first-child{
+			margin-left: 0;
+		}
 	}
+
+	%list--unstyled,
+	.list--unstyled {
+		list-style:none;
+	}
+
+	%list--inline,
+	.list--inline {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		& > li{
+		  display: inline-block;
+		}
+	}
+	
 }
 

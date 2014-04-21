@@ -1,197 +1,202 @@
-/*------------------------------------*\
-    $FORMS
-\*------------------------------------*/
- 
- // Base Form styles
-%niceform,
-.niceform {
-	input,
-	select,
-	textarea, 
-	label { 
-		display: inline-block;
-	}
-	input,
-	select,
-	textarea {
-		padding: 0.5em 0.6em;
-		background-color: #ccc;
-		border: 0;
-		@include transition(all .4s ease);
-	}
-	input:focus,
-	select:focus,
-	textarea:focus {
-		outline: 0;
-	}
-	button {
-		cursor: pointer;
-		-webkit-appearance: none;
-		outline: none;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-		border: 0;
-	}
-	legend {
-		font-weight: bold;
-		border-bottom: 1px solid #000;
-		margin-bottom: $base-spacing-unit / 2;
-		width: 100%;
-		display: block;
-	}
-	fieldset {
-		border: 0;
-		padding: 0;
-		margin: 0;
-		margin-bottom: $base-spacing-unit;
+/* 
+------------------------------------------------
+FORMS
+------------------------------------------------
+*/
 
-	}
-}
-
-// Stacked form
-%niceform--stack,
-.niceform--stack {
-	input, 
-	label,
-	select,
-	textarea {
-		display: block;
-	}
-	label {
-		margin-bottom: $base-spacing-unit / 4;
-	}
-	input,
-	select,
-	textarea {
-		margin-bottom: $base-spacing-unit / 2;
-	}
-	input[type=checkbox],
-	input[type=checkbox] + label {
-		display: inline-block;
-	}
-}
-
-// Aligned form
-%niceform--aligned,
-.niceform--aligned {
-	.niceform__group {
-		display: block;
-		margin-bottom: $base-spacing-unit;
-
-		label,
+@if $use-forms {
+	 
+	 // BASE FORM   --------------------------------
+	%niceform,
+	.niceform {
 		input,
 		select,
-		textarea {
-			vertical-align: middle;	
+		textarea, 
+		label { 
+			display: inline-block;
 		}
 		input,
 		select,
 		textarea {
-			margin-bottom: 0;
+			padding: 0.5em 0.6em;
+			background-color: #ccc;
+			border: 0;
+			@include transition(all .4s ease);
+		}
+		input:focus,
+		select:focus,
+		textarea:focus {
+			outline: 0;
+		}
+		button {
+			cursor: pointer;
+			-webkit-appearance: none;
+			outline: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border: 0;
+		}
+		legend {
+			font-weight: bold;
+			border-bottom: 1px solid #000;
+			margin-bottom: $base-spacing-unit / 2;
+			width: 100%;
+			display: block;
+		}
+		fieldset {
+			border: 0;
+			padding: 0;
+			margin: 0;
+			margin-bottom: $base-spacing-unit;
+
+		}
+	}
+
+	// STACKED FORM   --------------------------------
+	%niceform--stack,
+	.niceform--stack {
+		input, 
+		label,
+		select,
+		textarea {
+			display: block;
 		}
 		label {
-			text-align: right;
-			width: 10em;
-			margin: 0 0.5em 0 0;
+			margin-bottom: $base-spacing-unit / 4;
 		}
-	}
-	.niceform__terms {
-		margin-left: 10.5em;	
-	}
-	
-}
-
-// Rounded on input
-%niceform--rounded,
-.niceform--rounded {
-	input,
-	select,
-	textarea {
-		border-radius: $brand-round;
-	}
-}
-
-// Custom checkbox
-// Example: 
-// <div class="checkbox--nice">
-//		<input type="checkbox" id="sample" name="sample">
-//		<label for="sample">Sample</label>
-// </div>
-
-%checkbox--nice,
-.checkbox--nice {
-	input[type=checkbox]{
-		display: none;
-	}
-	label{
-		display: inline-block;
-		cursor: pointer;
-		position: relative;
-		padding-left: $base-spacing-unit;
-		margin-right: $base-spacing-unit / 2;
-		//font-size: 13px;
-		&:before{
-			content: "";
+		input,
+		select,
+		textarea {
+			margin-bottom: $base-spacing-unit / 2;
+		}
+		input[type=checkbox],
+		input[type=checkbox] + label {
 			display: inline-block;
-			width: 14px;
-			height: 14px;
-			margin-right: 10px;
-			position: absolute;
-			@include border-radius(2px);
-			left: 0;
-			top:4px;
-			background-color: #ccc;
-			@include box-shadow(0,0,4px,rgba(0, 0, 0, 0.1),inset);
 		}
 	}
-	input[type=checkbox]:checked + label:before{
-		content: "\2713";
-		font-size: 12px;
-		color: #666;
-		text-align: center;
-		line-height: 14px;
-		display: inline-block;
-	}
-}
 
-// Custom Radio
-// Example: 
-// <div class="radio--nice">
-//		<input type="radio" id="sample" name="sample">
-//		<label for="sample">Sample</label>
-// </div>
-%radio--nice,
-.radio--nice {
-	input[type=radio] {  
-	    display: none;  
+	// ALIGNED FORM   --------------------------------
+	%niceform--aligned,
+	.niceform--aligned {
+		.niceform__group {
+			display: block;
+			margin-bottom: $base-spacing-unit;
+
+			label,
+			input,
+			select,
+			textarea {
+				vertical-align: middle;	
+			}
+			input,
+			select,
+			textarea {
+				margin-bottom: 0;
+			}
+			label {
+				text-align: right;
+				width: 10em;
+				margin: 0 0.5em 0 0;
+			}
+		}
+		.niceform__terms {
+			margin-left: 10.5em;	
+		}
+		
 	}
-	label{
-		display: inline-block;
-		cursor: pointer;
-		position: relative;
-		padding-left: $base-spacing-unit;
-		margin-right: $base-spacing-unit / 2;
-		//font-size: 13px;
-		&:before{
-			content: "";
-			display: inline-block;
-			width: 14px;
-			height: 14px;
-			margin-right: 10px;
-			position: absolute;
-			left: 0;
-			margin-bottom: 1px;
-			background-color: #ccc;
-			@include border-radius(7px);
-			border: 1px solid #666;
-			box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .1);
+
+	// ROUNDED FORM   --------------------------------
+	%niceform--rounded,
+	.niceform--rounded {
+		input,
+		select,
+		textarea {
+			border-radius: $brand-round;
 		}
 	}
-	input[type=radio]:checked + label:before {  
-	    content: "\2022";  
-	    color: #666;  
-	    font-size: 30px;  
-	    text-align: center;  
-	    line-height: 15px;  
+
+	// CUSTOM CHECKBOX   --------------------------------
+	// Example: 
+	// <div class="checkbox--nice">
+	//		<input type="checkbox" id="sample" name="sample">
+	//		<label for="sample">Sample</label>
+	// </div>
+
+	%checkbox--nice,
+	.checkbox--nice {
+		input[type=checkbox]{
+			display: none;
+		}
+		label{
+			display: inline-block;
+			cursor: pointer;
+			position: relative;
+			padding-left: $base-spacing-unit;
+			margin-right: $base-spacing-unit / 2;
+			//font-size: 13px;
+			&:before{
+				content: "";
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				margin-right: 10px;
+				position: absolute;
+				@include border-radius(2px);
+				left: 0;
+				top:4px;
+				background-color: #ccc;
+				@include box-shadow(0,0,4px,rgba(0, 0, 0, 0.1),inset);
+			}
+		}
+		input[type=checkbox]:checked + label:before{
+			content: "\2713";
+			font-size: 12px;
+			color: #666;
+			text-align: center;
+			line-height: 14px;
+			display: inline-block;
+		}
+	}
+
+	 // CUSTOM RADIO   --------------------------------
+	// Example: 
+	// <div class="radio--nice">
+	//		<input type="radio" id="sample" name="sample">
+	//		<label for="sample">Sample</label>
+	// </div>
+	%radio--nice,
+	.radio--nice {
+		input[type=radio] {  
+		    display: none;  
+		}
+		label{
+			display: inline-block;
+			cursor: pointer;
+			position: relative;
+			padding-left: $base-spacing-unit;
+			margin-right: $base-spacing-unit / 2;
+			//font-size: 13px;
+			&:before{
+				content: "";
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				margin-right: 10px;
+				position: absolute;
+				left: 0;
+				margin-bottom: 1px;
+				background-color: #ccc;
+				@include border-radius(7px);
+				border: 1px solid #666;
+				box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .1);
+			}
+		}
+		input[type=radio]:checked + label:before {  
+		    content: "\2022";  
+		    color: #666;  
+		    font-size: 30px;  
+		    text-align: center;  
+		    line-height: 15px;  
+		}
 	}
 }
