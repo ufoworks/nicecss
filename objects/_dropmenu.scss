@@ -1,0 +1,33 @@
+.dropmenu {
+	$maxheight-target: 150px;
+	position: relative;
+	&__openbtn {}
+	&__menu {
+		z-index: 100;
+		@include transition (max-height .6s ease);
+		overflow: hidden;
+		max-height: 0;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		margin-top: 5px;
+		list-style: none;
+		text-align: left;
+		& > li > a {
+			text-decoration: none;
+			min-width: 100px;
+			display: block;
+			white-space: nowrap;
+			padding: 4px 10px;
+			background-color: $base-ui-color;
+			font-weight: bold;
+			color: $negative-color;
+			&:hover { background-color: darken($base-ui-color, 5%); }
+		}
+	}
+	&:hover .dropmenu__menu {
+		max-height: $maxheight-target;
+	}
+}
