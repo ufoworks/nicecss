@@ -1,10 +1,17 @@
 .dropmenu {
+	// Config
 	$maxheight-target: 150px;
+	$link-paddings: 4px 10px;
+	$menu-minwidth: 100px;
+	$menu-topmargin: 5px;
+	$animation-speed: .6s;
+	
+	// Styles
 	position: relative;
 	&__openbtn {}
 	&__menu {
 		z-index: 100;
-		@include transition (max-height .6s ease);
+		@include transition (max-height $animation-speed ease);
 		overflow: hidden;
 		max-height: 0;
 		position: absolute;
@@ -12,15 +19,15 @@
 		right: 0;
 		margin: 0;
 		padding: 0;
-		margin-top: 5px;
+		margin-top: $menu-topmargin;
 		list-style: none;
 		text-align: left;
 		& > li > a {
 			text-decoration: none;
-			min-width: 100px;
+			min-width: $menu-minwidth;
 			display: block;
 			white-space: nowrap;
-			padding: 4px 10px;
+			padding: $link-paddings;
 			background-color: $base-ui-color;
 			font-weight: bold;
 			color: $negative-color;
