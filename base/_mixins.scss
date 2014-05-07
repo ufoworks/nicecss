@@ -268,3 +268,24 @@ MIXINS
   }
 }
 
+// Example: .box { @include inside-border(20px, blue, .6); }
+@mixin inside-border($values...) {
+  $borderThickness: 2px !default;
+  $borderColor: black !default;
+  $borderAlpha: 1 !default;
+
+  @each $value in $values {
+    @if type_of($value) == number {
+      @if unit($value) == "" {
+        $borderAlpha: $value;
+      } @else {
+        //No need to limit this length to just "px"
+        $borderThickness: $value;
+      }
+    } @else if type_of($value) == color {
+      $borderColor: $value;
+    }
+  }
+  box-shadow: inset 0 0 0 $borderThickness rgba($borderColor, $borderAlpha);
+}
+
