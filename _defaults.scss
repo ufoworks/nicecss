@@ -88,6 +88,19 @@ $line-height-ratio:     $base-line-height / $base-font-size;
 
 /* 
 ------------------------------------------------
+LOADER VARS
+------------------------------------------------
+*/
+
+$loader-center: 				true!default;
+$loader-dotsize: 				15px!default;
+$loader-dotcolor: 				#000!default;
+$loader-animation-duration: 	1.2s!default;
+$loader-animation-move: 		25px!default;
+
+
+/* 
+------------------------------------------------
 FRAMEWORK SETTINGS
 ------------------------------------------------
 */
@@ -97,3 +110,4 @@ $use-forms: true!default;
 $use-buttons: true!default;
 $use-lists: true!default;
 $use-headings: true!default;
+$use-loader: true!default;

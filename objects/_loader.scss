@@ -1,0 +1,46 @@
+/* 
+------------------------------------------------
+LOADER
+------------------------------------------------
+*/
+
+@if $use-loader {
+	@include keyframes(loader-animation-left) {
+		0%,50%,60% { @include vendor(transform, translateX(0)); }
+		25% { @include vendor(transform, translateX(-($loader-animation-move))); }
+		55% { @include vendor(transform, translateX(-3px));}
+
+	}
+	@include keyframes(loader-animation-right) {
+		5% { @include vendor(transform, translateX(3px));}
+		10%, 50%,100% { @include vendor(transform, translateX(0)); }
+		75% { @include vendor(transform, translateX($loader-animation-move)); }
+	}
+	.niceloader {
+		@if $loader-center {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include vendor(transform, translateX(-50%));
+			@include vendor(transform, translateY(-50%));
+		}
+
+		&:before,
+		&:after {
+			content:'';
+			display: inline-block;
+			width: $loader-dotsize;
+			height: $loader-dotsize;
+			@include border-radius(50%);
+			background-color: $loader-dotcolor;
+			@include animation($loader-animation-duration infinite ease-in);
+		}
+		&:before {
+			@include vendor(animation-name, loader-animation-left);
+		}
+		&:after {
+			@include vendor(animation-name, loader-animation-right);
+			//@include vendor(animation-delay, 1s);
+		}
+	}
+}
