@@ -81,6 +81,7 @@ FORMS
 		.niceform__group {
 			display: block;
 			margin-bottom: $base-spacing-unit;
+			&:last-child { margin-bottom: 0; }
 
 			label,
 			input,
