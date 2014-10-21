@@ -53,12 +53,6 @@ MIXINS
     text-overflow:ellipsis;
 }
 
-@mixin hide-text{
-    overflow:hidden;
-    text-indent:-9000px;
-    display:block;
-}
-
 @mixin respond-to($media){
   @each $breakpoint in $breakpoints{
       $name: nth($breakpoint, 1);
@@ -145,19 +139,19 @@ MIXINS
 */
 
 @mixin keyframes($animation-name) {
-  @-webkit-keyframes $animation-name {
+  @-webkit-keyframes #{$animation-name} {
     @content;
   }
-  @-moz-keyframes $animation-name {
+  @-moz-keyframes #{$animation-name} {
     @content;
   }  
-  @-ms-keyframes $animation-name {
+  @-ms-keyframes #{$animation-name} {
     @content;
   }
-  @-o-keyframes $animation-name {
+  @-o-keyframes #{$animation-name} {
     @content;
   }  
-  @keyframes $animation-name {
+  @keyframes #{$animation-name} {
     @content;
   }
 }
@@ -167,7 +161,8 @@ MIXINS
   -moz-animation: #{$str};
   -ms-animation: #{$str};
   -o-animation: #{$str};
-  animation: #{$str};      
+  animation: #{$str};
+  @include vendor(animation-fill-mode, both);    
 }
 
 
