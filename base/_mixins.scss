@@ -23,8 +23,8 @@ MIXINS
       $valuePx: $value;
       $valueRem: $value;
     } @else {
-      $valuePx: ($value * parseInt($base-spacing-unit)) + px;
-      $valueRem: ($value * parseInt($base-spacing-unit) / parseInt($base-font-size)) + rem;
+      $valuePx: ($value * strip-units($base-spacing-unit)) + px;
+      $valueRem: ($value * strip-units($base-spacing-unit) / strip-units($base-font-size)) + rem;
     }
     $resultPx: append($resultPx, $valuePx);
     $resultRem: append($resultRem, $valueRem);

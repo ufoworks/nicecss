@@ -1,4 +1,4 @@
 @function gutter-fix-to-percent($value) {
 	$masterWidth: 1024;
-	@return 100 * parseInt($value) / $masterWidth * 1%;
+	@return 100 * strip-units($value) / $masterWidth * 1%;
 }
