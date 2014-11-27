@@ -284,3 +284,16 @@ MIXINS
   box-shadow: inset 0 0 0 $borderThickness rgba($borderColor, $borderAlpha);
 }
 
+@mixin justify-list() {
+  text-align: justify;
+  font-size: 0.1px;
+  &:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+  & > li { 
+    display: inline-block;
+    font-size: $base-font-size
+  }
+}
