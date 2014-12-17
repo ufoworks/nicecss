@@ -270,3 +270,11 @@ MIXINS
     font-size: $base-font-size
   }
 }
+
+@mixin clearfix() {
+  &:after{
+    content: "";
+    display: table;
+    clear: both
+  }
+}
