@@ -7,7 +7,6 @@ FORMS
 @if $use-forms {
 	 
 	 // BASE FORM   --------------------------------
-	%niceform,
 	.niceform {
 		input,
 		select,
@@ -53,7 +52,6 @@ FORMS
 	}
 
 	// STACKED FORM   --------------------------------
-	%niceform--stack,
 	.niceform--stack {
 		input, 
 		label,
@@ -76,7 +74,6 @@ FORMS
 	}
 
 	// ALIGNED FORM   --------------------------------
-	%niceform--aligned,
 	.niceform--aligned {
 		.niceform__group {
 			display: block;
@@ -107,7 +104,6 @@ FORMS
 	}
 
 	// ROUNDED FORM   --------------------------------
-	%niceform--rounded,
 	.niceform--rounded {
 		input,
 		select,
@@ -123,7 +119,6 @@ FORMS
 	//		<label for="sample">Sample</label>
 	// </div>
 
-	%checkbox--nice,
 	.checkbox--nice {
 		input[type=checkbox]{
 			display: none;
@@ -165,7 +160,6 @@ FORMS
 	//		<input type="radio" id="sample" name="sample">
 	//		<label for="sample">Sample</label>
 	// </div>
-	%radio--nice,
 	.radio--nice {
 		input[type=radio] {  
 		    display: none;  

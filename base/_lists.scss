@@ -6,18 +6,15 @@ LISTS
 
 @if $use-lists {
 
-	%list,
 	.list {
 		padding: 0;
 		margin: 0;
 	}
 
-	%list--unstyled,
 	.list--unstyled {
 		list-style:none;
 	}
 
-	%list--inline,
 	.list--inline {
 		list-style: none;
 		padding: 0;
