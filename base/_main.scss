@@ -4,8 +4,10 @@ MAIN
 ------------------------------------------------
 */
 
-html{
-    font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
-    // overflow-y: auto;
-    // min-height:100%;
+body {
+	font-family: getface(brand);
+	@include font-size($base-font-size);
+	font-weight: $base-font-weight;
+	background-color: getcolor(bgcolor);
+	color: getcolor(text, base);
 }

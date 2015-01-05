@@ -5,27 +5,26 @@ MEDIA (@stubbornella)
 */
 
 .media { 
-	$media-margin: 10px;
-	@extend %clearfix;
+	@include clearfix;
 	&__body {
 		overflow: hidden;
 	}
 	&__image {
 		float: left;
-		margin-right: $media-margin;
+		@include rem-space(margin-right, 1);
 		img {
 			display: block;
 		}
 		.media--right & {
 			float: right;
-			margin-left: $media-margin;
+			@include rem-space(margin-left, 1);
 			margin-right: 0;
 		}
 		.media--wide & {
-			margin-right: $media-margin * 3;
+			@include rem-space(margin-right, 3);
 		}
 		.media--wide.media--right & {
-			margin-left: $media-margin * 3;
+			@include rem-space(margin-left, 3);
 		}
 	}
 }

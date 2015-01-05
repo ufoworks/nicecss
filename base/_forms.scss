@@ -18,7 +18,7 @@ FORMS
 		input,
 		select,
 		textarea {
-			padding: 0.5em 0.6em;
+			@include rem-space(padding, .5 1);
 			background-color: #ccc;
 			border: 0;
 			@include transition(all .4s ease);
@@ -39,7 +39,7 @@ FORMS
 		legend {
 			font-weight: bold;
 			border-bottom: 1px solid #000;
-			margin-bottom: $base-spacing-unit / 2;
+			@include rem-space(margin-bottom, .5);
 			width: 100%;
 			display: block;
 		}
@@ -47,7 +47,7 @@ FORMS
 			border: 0;
 			padding: 0;
 			margin: 0;
-			margin-bottom: $base-spacing-unit;
+			@include rem-space(margin-bottom, 1);
 
 		}
 	}
@@ -62,12 +62,12 @@ FORMS
 			display: block;
 		}
 		label {
-			margin-bottom: $base-spacing-unit / 4;
+			@include rem-space(margin-bottom, .25);
 		}
 		input,
 		select,
 		textarea {
-			margin-bottom: $base-spacing-unit / 2;
+			@include rem-space(margin-bottom, .5);
 		}
 		input[type=checkbox],
 		input[type=checkbox] + label {
@@ -80,7 +80,7 @@ FORMS
 	.niceform--aligned {
 		.niceform__group {
 			display: block;
-			margin-bottom: $base-spacing-unit;
+			@include rem-space(margin-bottom, 1);
 			&:last-child { margin-bottom: 0; }
 
 			label,
@@ -96,12 +96,12 @@ FORMS
 			}
 			label {
 				text-align: right;
-				width: 10em;
-				margin: 0 0.5em 0 0;
+				@include rem-space(width, 10);
+				@include rem-space(margin, 0 .5 0);
 			}
 		}
 		.niceform__terms {
-			margin-left: 10.5em;	
+			@include rem-space(margin-left, 10.5);
 		}
 		
 	}
@@ -112,7 +112,7 @@ FORMS
 		input,
 		select,
 		textarea {
-			border-radius: $brand-round;
+			border-radius: $base-round;
 		}
 	}
 

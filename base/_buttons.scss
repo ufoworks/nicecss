@@ -7,8 +7,13 @@ BUTTONS
 @if $use-buttons {
 
 	// BASE BUTTON  --------------------------------
-	%button,
 	.button {
+		cursor: pointer;
+		-webkit-appearance: none;
+		outline: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border: 0;
 		display: inline-block;
 		line-height: normal;
 		white-space: nowrap;
@@ -20,30 +25,37 @@ BUTTONS
 		-moz-user-select: none;
 		-ms-user-select: none;
 		user-select: none;
-		padding: 0.5em 1.5em;
-		color: $base-text-color;
-		background-color: $base-ui-color;
 		text-decoration: none;
-		border-radius: $brand-round;
-		&:hover,
-		&:focus,
-		&:active {
-			background-color: darken($base-ui-color,20%);
-			outline: 0;
+		font-family: getface(brand);
+		font-weight: $base-font-weight;
+		@include transition(all .3s ease);
+		&--rounded {
+			@include rem-space(padding, .5 1);
+			color: getcolor(text, base);
+			background-color: getcolor(ui, base);
+			border-radius: $base-round;
+			@include on-event{
+				background-color: getcolor(ui, dark);
+			}	
 		}
-	}
-
-
-	// BUTTON SIZES  --------------------------------
-
-	%button--small,
-	.button--small {
-		font-size: 75%;
-	}
-
-	%button--big,
-	.button--big {
-		font-size: 125%;
+		&--brandtext {
+			color: getcolor(brand);
+			@include on-event {
+				text-decoration: underline;
+			}
+		}
+		&--brandbg {
+			background-color: getcolor(brand);
+			@include rem-space(padding, .5 1);
+			@include on-event {
+				background-color: getcolor(ui, base);
+			}
+		}
+		&--underline {
+			@include on-event {
+				text-decoration: underline;
+			}
+		}
 	}
 	
 }

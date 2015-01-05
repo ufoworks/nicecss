@@ -17,7 +17,12 @@
     "Gruntfile.js",
     "package.json",
     "test/",
-    "node_modules/"
+    "node_modules/",
+    "bower_components"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "breakpoint-sass": "~2.5.0",
+    "sass-flex-mixin": "~1.0.0"
+  }
 }

@@ -25,7 +25,7 @@ FLAG (@csswizardry)
     }
 
     .flag__image {
-        padding-right: 10px;
+        @include rem-space(padding-right, 1);
 
         > img {
             display: block;
@@ -34,7 +34,7 @@ FLAG (@csswizardry)
 
         .flag--rev & {
             padding-right: 0;
-            padding-left: 10px;
+            @include rem-space(padding-left, 1);
         }
 
     }

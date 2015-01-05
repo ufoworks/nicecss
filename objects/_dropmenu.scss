@@ -1,7 +1,7 @@
 .dropmenu {
 	// Config
 	$maxheight-target: 150px;
-	$link-paddings: 4px 10px;
+	$link-paddings: .5 1;
 	$menu-minwidth: 100px;
 	$menu-topmargin: 5px;
 	$animation-speed: .6s;
@@ -22,16 +22,15 @@
 		margin-top: $menu-topmargin;
 		list-style: none;
 		text-align: left;
-		& > li > a {
+		> li > a {
 			text-decoration: none;
 			min-width: $menu-minwidth;
 			display: block;
 			white-space: nowrap;
-			padding: $link-paddings;
-			background-color: $base-ui-color;
-			font-weight: bold;
-			color: $negative-color;
-			&:hover { background-color: darken($base-ui-color, 5%); }
+			@include rem-space(padding, $link-paddings);
+			background-color: getcolor(ui);
+			color: getcolor(light);
+			&:hover { background-color: getcolor(ui, dark); }
 		}
 	}
 	&:hover .dropmenu__menu {
