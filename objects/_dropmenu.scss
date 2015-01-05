@@ -1,39 +1,41 @@
-.dropmenu {
-	// Config
-	$maxheight-target: 150px;
-	$link-paddings: .5 1;
-	$menu-minwidth: 100px;
-	$menu-topmargin: 5px;
-	$animation-speed: .6s;
-	
-	// Styles
-	position: relative;
-	&__openbtn {}
-	&__menu {
-		z-index: 100;
-		@include transition (max-height $animation-speed ease);
-		overflow: hidden;
-		max-height: 0;
-		position: absolute;
-		top: 100%;
-		right: 0;
-		margin: 0;
-		padding: 0;
-		margin-top: $menu-topmargin;
-		list-style: none;
-		text-align: left;
-		> li > a {
-			text-decoration: none;
-			min-width: $menu-minwidth;
-			display: block;
-			white-space: nowrap;
-			@include rem-space(padding, $link-paddings);
-			background-color: getcolor(ui);
-			color: getcolor(light);
-			&:hover { background-color: getcolor(ui, dark); }
+@if $use-dropmenu {
+	.dropmenu {
+		// Config
+		$maxheight-target: 150px;
+		$link-paddings: .5 1;
+		$menu-minwidth: 100px;
+		$menu-topmargin: 5px;
+		$animation-speed: .6s;
+		
+		// Styles
+		position: relative;
+		&__openbtn {}
+		&__menu {
+			z-index: 100;
+			@include transition (max-height $animation-speed ease);
+			overflow: hidden;
+			max-height: 0;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			margin: 0;
+			padding: 0;
+			margin-top: $menu-topmargin;
+			list-style: none;
+			text-align: left;
+			> li > a {
+				text-decoration: none;
+				min-width: $menu-minwidth;
+				display: block;
+				white-space: nowrap;
+				@include rem-space(padding, $link-paddings);
+				background-color: getcolor(ui);
+				color: getcolor(light);
+				&:hover { background-color: getcolor(ui, dark); }
+			}
 		}
-	}
-	&:hover .dropmenu__menu {
-		max-height: $maxheight-target;
+		&:hover .dropmenu__menu {
+			max-height: $maxheight-target;
+		}
 	}
 }

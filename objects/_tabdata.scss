@@ -3,20 +3,21 @@
 TABDATA
 ------------------------------------------------
 */
-
-.tabdata {
-	.tabdata__group {
-		display: block;
-		@include rem-space(margin-bottom, .5);
+@if $use-tabdata {
+	.tabdata {
+		&__group {
+			display: block;
+			@include rem-space(margin-bottom, .5);
+			&__name {
+				display: inline-block;
+				vertical-align: middle;
+				width: 10em;
+				@include rem-space(margin-right, 1);
+			}
+			&__value {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}	
 	}
-		.tabdata__group__name {
-			display: inline-block;
-			vertical-align: middle;
-			width: 10em;
-			@include rem-space(margin-right, 1);
-		}
-		.tabdata__group__value {
-			display: inline-block;
-			vertical-align: middle;
-		}
 }

@@ -1,13 +1,15 @@
-.stackmenu {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	& > li > a {
-		display: block;
-		@include rem-space(padding, .5 0);
-		color: getcolor(ui);
-		text-decoration: none;
-		border-top: 1px solid getcolor(ui, dark);
-		@include effect(.3s);
+@if $use-stackmenu {
+	.stackmenu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		& > li > a {
+			display: block;
+			@include rem-space(padding, .5 0);
+			color: getcolor(ui);
+			text-decoration: none;
+			border-top: 1px solid getcolor(ui, dark);
+			@include effect(.3s);
+		}
 	}
 }
