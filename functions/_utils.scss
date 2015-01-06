@@ -3,7 +3,7 @@
 }
 
 @function getcolor($scheme, $tone: base) {
-	@if type-of(map-get($colors, $scheme)) == 'map' {
+	@if type-of(map-get($colors, $scheme)) == map {
 		@if not map-has-key(map-get($colors, $scheme), $tone) {
 		    @warn "Key `#{$tone}` not found in $colors map.";
 		}
