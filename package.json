@@ -1,6 +1,6 @@
 {
   "name": "NiceCSS",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.4.4",
