@@ -6,3 +6,7 @@
 @function rem($value) {
 	@return #{strip-units($value / $base-font-size)}rem;
 }
+
+@function rem-space($value) {
+	@return #{strip-units($value * $base-spacing-unit / $base-font-size)}rem;
+}
