@@ -7,6 +7,17 @@
 	@return #{strip-units($value / $base-font-size)}rem;
 }
 
-@function rem-space($value) {
-	@return #{strip-units($value * $base-spacing-unit / $base-font-size)}rem;
+@function rem-space($values) {
+	$result: ();
+	$_value: 0;
+
+	@each $value in $values {
+	  @if $value == auto or $value == 0 {
+	    $_value: $value;
+	  } @else {
+	    $_value: #{strip-units($value * $base-spacing-unit / $base-font-size)}rem;
+	  }
+	  $result: append($result, $_value);
+	}
+	@return $result;
 }
