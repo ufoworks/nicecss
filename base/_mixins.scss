@@ -396,6 +396,12 @@ MIXINS
 @mixin scale($value) {
   @include vendor(transform, scale($value));
 }
+@mixin scaleX($value) {
+  @include vendor(transform, scaleX($value));
+}
+@mixin scaleY($value) {
+  @include vendor(transform, scaleY($value));
+}
 @mixin scale3d($value) {
   @include vendor(transform, scale3d($value));
 }
