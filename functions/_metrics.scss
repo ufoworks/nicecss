@@ -2,3 +2,7 @@
 	$masterWidth: 1024;
 	@return 100 * strip-units($value) / $masterWidth * 1%;
 }
+
+@function rem($value) {
+	@return #{strip-units($value / $base-font-size)}rem;
+}

@@ -16,7 +16,3 @@
 @function getface($type: brand) {
 	@return map-get($faces, $type);
 }
-
-@function rem($value) {
-	@return #{strip-units($value / $base-font-size)} rem;
-}
