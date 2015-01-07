@@ -66,45 +66,6 @@ $breakpoints: (
 )!default;
 
 
-/* 
-------------------------------------------------
-TEXTS
-------------------------------------------------
-*/
-
-
-$text: (
-	pagetitle: (
-		size: 48px,
-		lineheight: 1.5,
-		color: getcolor(brand),
-		family: getface(brand),
-		weight: 700
-	),
-	sectiontitle: (
-		size: 36px,
-		color: getcolor(brand),
-		lineheight: 1.4,
-		family: getface(brand),
-		weight: 500
-	),
-	moduletitle: (
-		size: 22px,
-		lineheight: 1.3,
-		color: getcolor(alt),
-		family: getface(brand),
-		weight: 500
-	),
-	bodycopy: (
-		size: $base-font-size,
-		lineheight: 1.3,
-		color: getcolor(text, base),
-		family: getface(brand),
-		weight: 400
-	)
-)!default;
-
-
 
 /* 
 ------------------------------------------------
@@ -164,7 +125,6 @@ $use-helpers: 		true !default;
 $use-forms: 		true !default;
 $use-buttons: 		true !default;
 $use-lists: 		true !default;
-$use-texts: 		true !default;
 $use-loader: 		true !default;
 $use-dropmenu: 		true !default;
 $use-stackmenu:		true !default;
