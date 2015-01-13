@@ -79,7 +79,7 @@ HELPERS
 			@each $break in $responsive {
 				@include respond-to(#{$break}) {
 					.#{$break}-#{$name}--#{$alias} {
-						@include rem-space(map-get($data, prop), nth(map-get($data, values), $cont));
+						@include rem-space(map-get($data, prop), nth(map-get($data, values), $cont), true);
 					}	
 				}
 			}
