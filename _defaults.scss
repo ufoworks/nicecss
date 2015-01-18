@@ -44,10 +44,21 @@ FACES
 */
 
 $faces: (
+	title: 24,
+	bodycopy: 14
+)!default;
+
+
+/* 
+------------------------------------------------
+SIZES
+------------------------------------------------
+*/
+
+$sizes: (
 	brand: sans-serif,
 	alt: serif
 )!default;
-
 
 
 /* 

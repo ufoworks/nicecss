@@ -108,6 +108,20 @@ HELPERS
 		}
 	}
 
+	// FACES -----------------------------------------------
+	@each $name, $value in $faces {
+		.font--#{$name} {
+			font: $value;
+		}
+	}
+
+	// SIZES -----------------------------------------------
+	@each $name, $value in $sizes {
+		.size--#{$name} {
+			@include font-size($value, false);
+		}
+	}
+
 	// CLEARFIX     ---------------------------------------
 	.clearfix {
 		@include clearfix;
