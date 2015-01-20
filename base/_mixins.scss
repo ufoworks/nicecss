@@ -13,28 +13,14 @@ MIXINS
 }
 
 @mixin rem-space($property, $values, $isImportant:false) {
-  $resultPx: ();
-  $resultRem: ();
-  $valuePx: 0;
-  $valueRem: 0;
   $important: '';
-  @each $value in $values {
-    @if $value == auto or $value == 0 {
-      $valuePx: $value;
-      $valueRem: $value;
-    } @else {
-      $valuePx: ($value * strip-units($base-spacing-unit)) + px;
-      $valueRem: ($value * strip-units($base-spacing-unit) / strip-units($base-font-size)) + rem;
-    }
-    $resultPx: append($resultPx, $valuePx);
-    $resultRem: append($resultRem, $valueRem);
-    
-  }
+
   @if $isImportant == true {
-    $important: '!important';
+    $important: ' !important';
   }
-  #{$property}: $resultPx #{$important};
-  #{$property}: $resultRem #{$important};
+
+  #{$property}: space($values)#{$important};
+  #{$property}: rem-space($values)#{$important};
 }
 
 

@@ -21,3 +21,18 @@
 	}
 	@return $result;
 }
+
+@function space($values) {
+	$result: ();
+	$_value: 0;
+
+	@each $value in $values {
+	  @if $value == auto or $value == 0 {
+	    $_value: $value;
+	  } @else {
+	    $_value: #{strip-units($value * $base-spacing-unit)}px;
+	  }
+	  $result: append($result, $_value);
+	}
+	@return $result;
+}
