@@ -1,0 +1,80 @@
+/* 
+------------------------------------------------
+LAYOUT UTILITIES
+------------------------------------------------
+*/
+
+@mixin rem-space($property, $values, $isImportant:false) {
+  $important: '';
+
+  @if $isImportant == true {
+    $important: ' !important';
+  }
+
+  #{$property}: space($values)#{$important};
+  #{$property}: rem-space($values)#{$important};
+}
+
+@mixin ghostVerticalAlign(){
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; width: .1px;
+  }
+}
+
+@mixin justify-list() {
+  text-align: justify;
+  font-size: 0.1px;
+  &:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+  }
+  & > li { 
+    display: inline-block;
+    font-size: $base-font-size
+  }
+}
+
+@mixin clearfix() {
+  &:after{
+    content: "";
+    display: table;
+    clear: both
+  }
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin absolute-center($legacy:false, $width: 0, $height: 0) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @if $legacy {
+    margin-left: ($width / 2) * -1px;
+    margin-top: ($height / 2) * -1px;
+  } @else {
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
+
+@mixin absolute($args) {
+  $top: nth($args, 1);
+  $right: nth($args, 2);
+  $bottom: nth($args, 3);
+  $left: nth($args, 4);
+  
+  position: absolute;
+  @if $top { @include rem-space(top, $top); };
+  @if $right { @include rem-space(right, $right); };
+  @if $bottom { @include rem-space(bottom, $bottom); };
+  @if $left { @include rem-space(left, $left); };
+}

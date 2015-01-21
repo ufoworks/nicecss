@@ -1,0 +1,105 @@
+/* 
+------------------------------------------------
+GRAPH UTILITIES
+------------------------------------------------
+*/
+
+@mixin triangle($width: 20px, $height: 20px, $direction: up, $color: red) {
+  width: 0;
+  height: 0;
+  
+  // Right
+  @if $direction == right {
+    border-top: $height/2 solid transparent;
+    border-bottom: $height/2 solid transparent;
+    border-left: $width solid $color;
+  }
+
+  // Left
+  @if $direction == left {
+    border-top: $height/2 solid transparent;
+    border-bottom: $height/2 solid transparent;
+    border-right: $width solid $color;
+  }
+
+  // Up
+  @if $direction == up {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-bottom: $height solid $color;
+  }
+
+  // Down
+  @if $direction == down {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-top: $height solid $color;
+  }
+}
+
+@mixin circle($size, $bgcolor) {
+  display: inline-block;
+  width: $size;
+  height: $size;
+  @include border-radius(50%);
+  background-color: $bgcolor;
+}
+
+// Example: .box { @include inside-border(20px, blue, .6); }
+@mixin inside-border($values...) {
+  $borderThickness: 2px !default;
+  $borderColor: black !default;
+  $borderAlpha: 1 !default;
+
+  @each $value in $values {
+    @if type_of($value) == number {
+      @if unit($value) == "" {
+        $borderAlpha: $value;
+      } @else {
+        //No need to limit this length to just "px"
+        $borderThickness: $value;
+      }
+    } @else if type_of($value) == color {
+      $borderColor: $value;
+    }
+  }
+  box-shadow: inset 0 0 0 $borderThickness rgba($borderColor, $borderAlpha);
+}
+
+// Author: gillesbertaux
+
+@mixin background-gradient($startcolor, $endcolor, $orientation) {
+    background: $startcolor;
+    @if $orientation == vertical {
+    // vertical
+      background: -moz-linear-gradient(top,  $startcolor 0%, $endcolor 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$startcolor), color-stop(100%,$endcolor));
+      background: -webkit-linear-gradient(top,  $startcolor 0%,$endcolor 100%);
+      background: -o-linear-gradient(top,  $startcolor 0%,$endcolor 100%);
+      background: -ms-linear-gradient(top,  $startcolor 0%,$endcolor 100%);
+      background: linear-gradient(to bottom,  $startcolor 0%,$endcolor 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=0 );
+    }
+    @else if $orientation == horizontal
+    {
+    // horizontal
+      background: -moz-linear-gradient(left,  $startcolor 0%, $endcolor 100%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%,$startcolor), color-stop(100%,$endcolor));
+      background: -webkit-linear-gradient(left,  $startcolor 0%,$endcolor 100%);
+      background: -o-linear-gradient(left,  $startcolor 0%,$endcolor 100%);
+      background: -ms-linear-gradient(left,  $startcolor 0%,$endcolor 100%);
+      background: linear-gradient(to right,  $startcolor 0%,$endcolor 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=1 );
+    }
+    @else
+    {
+    // radial
+      background: -moz-radial-gradient(center, ellipse cover,  $startcolor 0%, $endcolor 100%);
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$startcolor), color-stop(100%,$endcolor));
+      background: -webkit-radial-gradient(center, ellipse cover,  $startcolor 0%,$endcolor 100%);
+      background: -o-radial-gradient(center, ellipse cover,  $startcolor 0%,$endcolor 100%);
+      background: -ms-radial-gradient(center, ellipse cover,  $startcolor 0%,$endcolor 100%);
+      background: radial-gradient(ellipse at center,  $startcolor 0%,$endcolor 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=1 );
+    }
+}

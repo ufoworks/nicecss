@@ -1,0 +1,64 @@
+/* 
+------------------------------------------------
+UTILITIES
+------------------------------------------------
+*/
+
+@mixin truncate($truncation-boundary){
+    max-width:$truncation-boundary;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+@mixin hide-text(){
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+@mixin image-replacement($url, $w, $h){
+  @include hide-text;
+  background: url(#{$url});
+  width: #{$w}px;
+  height: #{$h}px;
+}
+
+@mixin placeholder($color) {
+  ::-webkit-input-placeholder {
+     color: $color;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+     color: $color;  
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: $color;  
+  }
+  :-ms-input-placeholder {  
+     color: $color;  
+  }
+}
+
+/// Based on Event wrapper
+/// @author Harry Roberts
+@mixin on-event($active: false) {
+    @if $active {
+        &:hover,
+        &:active,
+        &:focus,
+        &.active {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}

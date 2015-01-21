@@ -12,7 +12,13 @@ IMPORTS
 @import 'breakpoint-sass/stylesheets/breakpoint';
 @import 'sass-flex-mixin/flex';
 
-@import "base/mixins";
+@import "utils/crossbrowser";
+@import "utils/effects";
+@import "utils/fonts";
+@import "utils/graph";
+@import "utils/layout";
+@import "utils/utilities";
+
 @import "base/reset";
 @import "base/normalize";
 @import "base/helpers";
