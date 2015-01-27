@@ -62,3 +62,10 @@ UTILITIES
         }
     }
 }
+
+// From <http://sass-guidelin.es/>
+@mixin when-inside($selector) {
+  #{$selector} & {
+    @content;
+  }
+}

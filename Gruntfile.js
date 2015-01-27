@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     sass:{
       dev: {
         options:{
-          loadPath: 'bower_components/'
+          loadPath: ['bower_components/']
         },
         files:{
           'test/css/main.css':'nicecss.scss'

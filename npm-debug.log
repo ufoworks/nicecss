@@ -1,0 +1,245 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'n' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.21
+4 verbose cache add [ 'n', null ]
+5 verbose cache add name=undefined spec="n" args=["n",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'n',
+6 verbose parsed url   path: 'n',
+6 verbose parsed url   href: 'n' }
+7 silly lockFile d1854cae-n n
+8 verbose lock n /Users/oscar/.npm/d1854cae-n.lock
+9 silly lockFile d1854cae-n n
+10 silly lockFile d1854cae-n n
+11 verbose addNamed [ 'n', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 6b58d7dc-n n@
+14 verbose lock n@ /Users/oscar/.npm/6b58d7dc-n.lock
+15 silly addNameRange { name: 'n', range: '*', hasData: false }
+16 verbose url raw n
+17 verbose url resolving [ 'https://registry.npmjs.org/', './n' ]
+18 verbose url resolved https://registry.npmjs.org/n
+19 info trying registry request attempt 1 at 10:54:22
+20 http GET https://registry.npmjs.org/n
+21 http 200 https://registry.npmjs.org/n
+22 silly registry.get cb [ 200,
+22 silly registry.get   { date: 'Sun, 25 Jan 2015 09:54:23 GMT',
+22 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly registry.get     etag: '"9VZ9TTGGXB9PI8591Z2CKA1HO"',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'cache-control': 'max-age=60',
+22 silly registry.get     'content-length': '38801',
+22 silly registry.get     'accept-ranges': 'bytes',
+22 silly registry.get     via: '1.1 varnish',
+22 silly registry.get     age: '0',
+22 silly registry.get     'x-served-by': 'cache-ams4129-AMS',
+22 silly registry.get     'x-cache': 'HIT',
+22 silly registry.get     'x-cache-hits': '1',
+22 silly registry.get     'x-timer': 'S1422179663.002278,VS0,VE90',
+22 silly registry.get     vary: 'Accept',
+22 silly registry.get     'keep-alive': 'timeout=10, max=50',
+22 silly registry.get     connection: 'Keep-Alive' } ]
+23 silly addNameRange number 2 { name: 'n', range: '*', hasData: true }
+24 silly addNameRange versions [ 'n',
+24 silly addNameRange   [ '0.0.1',
+24 silly addNameRange     '0.0.2',
+24 silly addNameRange     '0.0.3',
+24 silly addNameRange     '0.0.4',
+24 silly addNameRange     '0.1.0',
+24 silly addNameRange     '0.1.1',
+24 silly addNameRange     '0.1.2',
+24 silly addNameRange     '0.2.0',
+24 silly addNameRange     '0.2.1',
+24 silly addNameRange     '0.2.2',
+24 silly addNameRange     '0.3.0',
+24 silly addNameRange     '0.4.0',
+24 silly addNameRange     '0.4.1',
+24 silly addNameRange     '0.4.2',
+24 silly addNameRange     '0.5.0',
+24 silly addNameRange     '0.5.1',
+24 silly addNameRange     '0.5.2',
+24 silly addNameRange     '0.5.3',
+24 silly addNameRange     '0.5.4',
+24 silly addNameRange     '0.6.0',
+24 silly addNameRange     '0.6.1',
+24 silly addNameRange     '0.7.0',
+24 silly addNameRange     '0.7.1',
+24 silly addNameRange     '0.7.2',
+24 silly addNameRange     '0.7.3',
+24 silly addNameRange     '0.8.0',
+24 silly addNameRange     '0.8.1',
+24 silly addNameRange     '0.8.2',
+24 silly addNameRange     '0.9.0',
+24 silly addNameRange     '0.9.1',
+24 silly addNameRange     '0.9.2',
+24 silly addNameRange     '0.9.3',
+24 silly addNameRange     '1.0.0',
+24 silly addNameRange     '1.1.0',
+24 silly addNameRange     '1.2.1',
+24 silly addNameRange     '1.2.2',
+24 silly addNameRange     '1.2.3',
+24 silly addNameRange     '1.2.4',
+24 silly addNameRange     '1.2.5',
+24 silly addNameRange     '1.2.6',
+24 silly addNameRange     '1.2.7',
+24 silly addNameRange     '1.2.8',
+24 silly addNameRange     '1.2.9',
+24 silly addNameRange     '1.2.11',
+24 silly addNameRange     '1.2.13' ] ]
+25 verbose addNamed [ 'n', '1.2.13' ]
+26 verbose addNamed [ '1.2.13', '1.2.13' ]
+27 silly lockFile c0e64dfd-n-1-2-13 n@1.2.13
+28 verbose lock n@1.2.13 /Users/oscar/.npm/c0e64dfd-n-1-2-13.lock
+29 silly lockFile b56000b0-egistry-npmjs-org-n-n-1-2-13-tgz https://registry.npmjs.org/n/-/n-1.2.13.tgz
+30 verbose lock https://registry.npmjs.org/n/-/n-1.2.13.tgz /Users/oscar/.npm/b56000b0-egistry-npmjs-org-n-n-1-2-13-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/n/-/n-1.2.13.tgz',
+31 verbose addRemoteTarball   '90922391ba49e2386ae316370915085042074190' ]
+32 info retry fetch attempt 1 at 10:54:23
+33 verbose fetch to= /Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/tmp.tgz
+34 http GET https://registry.npmjs.org/n/-/n-1.2.13.tgz
+35 http 200 https://registry.npmjs.org/n/-/n-1.2.13.tgz
+36 verbose tar unpack /Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/tmp.tgz
+37 silly lockFile 80af9b80-3373-0-09027597913518548-package tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package
+38 verbose lock tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package /Users/oscar/.npm/80af9b80-3373-0-09027597913518548-package.lock
+39 silly lockFile 9409eef0-3373-0-09027597913518548-tmp-tgz tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/tmp.tgz
+40 verbose lock tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/tmp.tgz /Users/oscar/.npm/9409eef0-3373-0-09027597913518548-tmp-tgz.lock
+41 silly gunzTarPerm modes [ '755', '644' ]
+42 silly gunzTarPerm extractEntry package.json
+43 silly gunzTarPerm extractEntry bin/n
+44 silly gunzTarPerm extractEntry History.md
+45 silly gunzTarPerm extractEntry Makefile
+46 silly gunzTarPerm extractEntry Readme.md
+47 silly lockFile 80af9b80-3373-0-09027597913518548-package tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package
+48 silly lockFile 80af9b80-3373-0-09027597913518548-package tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package
+49 silly lockFile 9409eef0-3373-0-09027597913518548-tmp-tgz tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/tmp.tgz
+50 silly lockFile 9409eef0-3373-0-09027597913518548-tmp-tgz tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/tmp.tgz
+51 verbose tar pack [ '/Users/oscar/.npm/n/1.2.13/package.tgz',
+51 verbose tar pack   '/Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package' ]
+52 verbose tarball /Users/oscar/.npm/n/1.2.13/package.tgz
+53 verbose folder /Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package
+54 silly lockFile 80af9b80-3373-0-09027597913518548-package tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package
+55 verbose lock tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package /Users/oscar/.npm/80af9b80-3373-0-09027597913518548-package.lock
+56 silly lockFile 14dd8652-s-oscar-npm-n-1-2-13-package-tgz tar:///Users/oscar/.npm/n/1.2.13/package.tgz
+57 verbose lock tar:///Users/oscar/.npm/n/1.2.13/package.tgz /Users/oscar/.npm/14dd8652-s-oscar-npm-n-1-2-13-package-tgz.lock
+58 silly lockFile 80af9b80-3373-0-09027597913518548-package tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package
+59 silly lockFile 80af9b80-3373-0-09027597913518548-package tar:///Users/oscar/tmp/npm-70606-s7RBCxuX/1422179663373-0.09027597913518548/package
+60 silly lockFile 14dd8652-s-oscar-npm-n-1-2-13-package-tgz tar:///Users/oscar/.npm/n/1.2.13/package.tgz
+61 silly lockFile 14dd8652-s-oscar-npm-n-1-2-13-package-tgz tar:///Users/oscar/.npm/n/1.2.13/package.tgz
+62 silly lockFile e468c97c-Users-oscar-npm-n-1-2-13-package /Users/oscar/.npm/n/1.2.13/package
+63 verbose lock /Users/oscar/.npm/n/1.2.13/package /Users/oscar/.npm/e468c97c-Users-oscar-npm-n-1-2-13-package.lock
+64 silly lockFile e468c97c-Users-oscar-npm-n-1-2-13-package /Users/oscar/.npm/n/1.2.13/package
+65 silly lockFile e468c97c-Users-oscar-npm-n-1-2-13-package /Users/oscar/.npm/n/1.2.13/package
+66 verbose tar unpack /Users/oscar/.npm/n/1.2.13/package.tgz
+67 silly lockFile dd0fe218-Users-oscar-npm-n-1-2-13-package tar:///Users/oscar/.npm/n/1.2.13/package
+68 verbose lock tar:///Users/oscar/.npm/n/1.2.13/package /Users/oscar/.npm/dd0fe218-Users-oscar-npm-n-1-2-13-package.lock
+69 silly lockFile 14dd8652-s-oscar-npm-n-1-2-13-package-tgz tar:///Users/oscar/.npm/n/1.2.13/package.tgz
+70 verbose lock tar:///Users/oscar/.npm/n/1.2.13/package.tgz /Users/oscar/.npm/14dd8652-s-oscar-npm-n-1-2-13-package-tgz.lock
+71 silly gunzTarPerm modes [ '755', '644' ]
+72 silly gunzTarPerm extractEntry package.json
+73 silly gunzTarPerm extractEntry History.md
+74 silly gunzTarPerm extractEntry Makefile
+75 silly gunzTarPerm extractEntry Readme.md
+76 silly gunzTarPerm extractEntry bin/n
+77 silly lockFile dd0fe218-Users-oscar-npm-n-1-2-13-package tar:///Users/oscar/.npm/n/1.2.13/package
+78 silly lockFile dd0fe218-Users-oscar-npm-n-1-2-13-package tar:///Users/oscar/.npm/n/1.2.13/package
+79 silly lockFile 14dd8652-s-oscar-npm-n-1-2-13-package-tgz tar:///Users/oscar/.npm/n/1.2.13/package.tgz
+80 silly lockFile 14dd8652-s-oscar-npm-n-1-2-13-package-tgz tar:///Users/oscar/.npm/n/1.2.13/package.tgz
+81 verbose chmod /Users/oscar/.npm/n/1.2.13/package.tgz 644
+82 verbose chown /Users/oscar/.npm/n/1.2.13/package.tgz [ 501, 20 ]
+83 silly lockFile b56000b0-egistry-npmjs-org-n-n-1-2-13-tgz https://registry.npmjs.org/n/-/n-1.2.13.tgz
+84 silly lockFile b56000b0-egistry-npmjs-org-n-n-1-2-13-tgz https://registry.npmjs.org/n/-/n-1.2.13.tgz
+85 silly lockFile c0e64dfd-n-1-2-13 n@1.2.13
+86 silly lockFile c0e64dfd-n-1-2-13 n@1.2.13
+87 silly lockFile 6b58d7dc-n n@
+88 silly lockFile 6b58d7dc-n n@
+89 silly resolved [ { name: 'n',
+89 silly resolved     description: 'node version manager',
+89 silly resolved     version: '1.2.13',
+89 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+89 silly resolved     homepage: 'https://github.com/tj/n',
+89 silly resolved     bugs: { url: 'https://github.com/tj/n/issues' },
+89 silly resolved     contributors: [ [Object] ],
+89 silly resolved     keywords:
+89 silly resolved      [ 'nvm',
+89 silly resolved        'node',
+89 silly resolved        'version',
+89 silly resolved        'manager',
+89 silly resolved        'switcher',
+89 silly resolved        'node',
+89 silly resolved        'binary',
+89 silly resolved        'env' ],
+89 silly resolved     bin: { n: './bin/n' },
+89 silly resolved     repository: { type: 'git', url: 'git://github.com/tj/n.git' },
+89 silly resolved     preferGlobal: true,
+89 silly resolved     os: [ '!win32' ],
+89 silly resolved     engines: { node: '*' },
+89 silly resolved     license: 'MIT',
+89 silly resolved     readme: '# n\n\nSimple flavour of node binary management, no subshells, no profile setup, no convoluted api, just _simple_.\n\n ![](https://i.cloudup.com/59cA8VEDae.gif)\n\n## Installation\n\n    $ npm install -g n\n\nor\n\n    $ make install\n    \nto `$HOME`. Prefix later calls to `n` with `N_PREFIX=$HOME`\n\n    $ PREFIX=$HOME make install\n\n### Installing Binaries\n\nInstall a few nodes:\n\n    $ n 0.8.14\n    $ n 0.8.17\n    $ n 0.9.6\n\nType `n` to prompt selection of an installed node. Use the up /\ndown arrow to navigate, and press enter or the right arrow to\nselect, or ^C to cancel:\n\n    $ n\n\n      0.8.14\n    ο 0.8.17\n      0.9.6\n\nUse or install the latest official release:\n\n    $ n latest\n\nUse or install the stable official release:\n\n    $ n stable\n\nSwitch to the previous version you were using:\n\n    $ n prev\n\n### Removing Binaries\n\nRemove some versions:\n\n    $ n rm 0.9.4 v0.10.0\n\nInstead of using `rm` we can simply use `-`:\n\n    $ n - 0.9.4\n\n### Binary Usage\n\nWhen running multiple versions of node, we can target\nthem directly by asking `n` for the binary path:\n\n    $ n bin 0.9.4\n    /usr/local/n/versions/0.9.4/bin/node\n\nOr by using a specific version through `n`\'s `use` sub-command:\n\n    $ n use 0.9.4 some.js\n\nwith flags:\n\n    $ n as 0.9.4 --debug some.js\n\n## Usage\n\n Output from `n --help`:\n\n    Usage: n [options] [COMMAND] [args]\n\n    Commands:\n\n      n                            Output versions installed\n      n latest                     Install or activate the latest node release\n      n stable                     Install or activate the latest stable node release\n      n <version>                  Install node <version>\n      n use <version> [args ...]   Execute node <version> with [args ...]\n      n bin <version>              Output bin path for <version>\n      n rm <version ...>           Remove the given version(s)\n      n --latest                   Output the latest node version available\n      n --stable                   Output the latest stable node version available\n      n ls                         Output the versions of node available\n\n    Options:\n\n      -V, --version   Output current version of n\n      -h, --help      Display help information\n\n    Aliases:\n\n      which   bin\n      use     as\n      list    ls\n      -       rm\n\n## Details\n\n `n` by default installs node to _/usr/local/n/versions_, from\n which it can see what you have currently installed, and activate previously installed versions of node when `n <version>` is invoked again.\n\n Activated nodes are then installed to the prefix _/usr/local_, which of course may be altered via the __N_PREFIX__ environment variable.\n\n To alter where `n` operates simply export __N_PREFIX__ to whatever you prefer.\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2014 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+89 silly resolved     readmeFilename: 'Readme.md',
+89 silly resolved     _id: 'n@1.2.13',
+89 silly resolved     dist: { shasum: '99a696f38f1a1270f0f3d9fc078923e202e0fff1' },
+89 silly resolved     _from: 'n@',
+89 silly resolved     _resolved: 'https://registry.npmjs.org/n/-/n-1.2.13.tgz' } ]
+90 info install n@1.2.13 into /usr/local/lib
+91 info installOne n@1.2.13
+92 info /usr/local/lib/node_modules/n unbuild
+93 info preuninstall n@1.1.0
+94 info uninstall n@1.1.0
+95 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild n@1.1.0
+96 verbose /usr/local/bin,[object Object] binRoot
+97 info postuninstall n@1.1.0
+98 verbose tar unpack /Users/oscar/.npm/n/1.2.13/package.tgz
+99 silly lockFile 9a5950d7-tar-usr-local-lib-node-modules-n tar:///usr/local/lib/node_modules/n
+100 verbose lock tar:///usr/local/lib/node_modules/n /Users/oscar/.npm/9a5950d7-tar-usr-local-lib-node-modules-n.lock
+101 silly lockFile 14dd8652-s-oscar-npm-n-1-2-13-package-tgz tar:///Users/oscar/.npm/n/1.2.13/package.tgz
+102 verbose lock tar:///Users/oscar/.npm/n/1.2.13/package.tgz /Users/oscar/.npm/14dd8652-s-oscar-npm-n-1-2-13-package-tgz.lock
+103 silly gunzTarPerm modes [ '755', '644' ]
+104 silly gunzTarPerm extractEntry package.json
+105 silly gunzTarPerm extractEntry History.md
+106 silly gunzTarPerm extractEntry Makefile
+107 silly gunzTarPerm extractEntry Readme.md
+108 silly gunzTarPerm extractEntry bin/n
+109 silly lockFile 9a5950d7-tar-usr-local-lib-node-modules-n tar:///usr/local/lib/node_modules/n
+110 silly lockFile 9a5950d7-tar-usr-local-lib-node-modules-n tar:///usr/local/lib/node_modules/n
+111 silly lockFile 14dd8652-s-oscar-npm-n-1-2-13-package-tgz tar:///Users/oscar/.npm/n/1.2.13/package.tgz
+112 silly lockFile 14dd8652-s-oscar-npm-n-1-2-13-package-tgz tar:///Users/oscar/.npm/n/1.2.13/package.tgz
+113 info preinstall n@1.2.13
+114 verbose readDependencies using package.json deps
+115 verbose readDependencies using package.json deps
+116 silly resolved []
+117 verbose about to build /usr/local/lib/node_modules/n
+118 info build /usr/local/lib/node_modules/n
+119 verbose linkStuff [ true,
+119 verbose linkStuff   '/usr/local/lib/node_modules',
+119 verbose linkStuff   true,
+119 verbose linkStuff   '/usr/local/lib/node_modules' ]
+120 info linkStuff n@1.2.13
+121 verbose linkBins n@1.2.13
+122 verbose link bins [ { n: './bin/n' }, '/usr/local/bin', true ]
+123 verbose linkMans n@1.2.13
+124 verbose rebuildBundles n@1.2.13
+125 info install n@1.2.13
+126 info postinstall n@1.2.13
+127 error peerinvalid The package generator-mocha does not satisfy its siblings' peerDependencies requirements!
+127 error peerinvalid Peer generator-backbone@0.2.8 wants generator-mocha@>=0.1.3
+127 error peerinvalid Peer generator-webapp@0.4.4 wants generator-mocha@~0.1.1
+128 error System Darwin 14.0.0
+129 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "n"
+130 error cwd /Users/oscar/Documents/dev/nicecss
+131 error node -v v0.10.21
+132 error npm -v 1.3.11
+133 error code EPEERINVALID
+134 verbose exit [ 1, true ]
