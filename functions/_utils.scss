@@ -16,3 +16,17 @@
 @function getface($type: brand) {
 	@return map-get($faces, $type);
 }
+
+/// Assets functions
+
+@function asset($type, $file) {
+  @return url(map-get($paths, base) + '/' + map-get($paths, $type) + '/' + $file);
+}
+
+@function image($file) {
+  @return asset(images, $file);
+}
+
+@function font($file) {
+  @return asset(fonts, $file);
+}
