@@ -1,8 +1,7 @@
-/* 
-------------------------------------------------
-IMPORTS
-------------------------------------------------
-*/
+///
+/// NICECSS main file
+/// nicecss.scss
+/// 
 
 @import "functions/utils";
 @import "functions/metrics";
@@ -19,7 +18,6 @@ IMPORTS
 @import "utils/layout";
 @import "utils/utilities";
 
-@import "base/reset";
 @import "base/normalize";
 @import "base/helpers";
 @import "base/buttons";
