@@ -1,12 +1,13 @@
-/* 
-------------------------------------------------
-FORMS
-------------------------------------------------
-*/
+////
+/// Buttons
+/// @group forms
+/// @author Nicemondays
+/// @since version 0.1
+////
 
 @if $use-forms {
 	 
-	 // BASE FORM   --------------------------------
+	/// Reset styles for form fields
 	.niceform {
 		input,
 		select,
@@ -51,7 +52,12 @@ FORMS
 		}
 	}
 
-	// STACKED FORM   --------------------------------
+	/// Variación de estilo para pares de campos apilados (stack)
+	/// @example
+	/// <form class="nicemonform niceform--stack">
+	/// 	<label for="name">Name:</label>
+	///		<input type="text" id="name">
+	/// </form>
 	.niceform--stack {
 		input, 
 		label,
@@ -73,7 +79,14 @@ FORMS
 		}
 	}
 
-	// ALIGNED FORM   --------------------------------
+	/// Variación de estilo para pares de campos alineados
+	/// @example
+	/// <form class="nicemonform niceform--aligned">
+	///		<div class="niceform__group">
+	/// 		<label for="name">Name:</label>
+	///			<input type="text" id="name">
+	///		</div>
+	/// </form>
 	.niceform--aligned {
 		.niceform__group {
 			display: block;
@@ -103,7 +116,12 @@ FORMS
 		
 	}
 
-	// ROUNDED FORM   --------------------------------
+	/// Variacion de estilo para inputs redondeados
+	/// @example
+	/// <form class="nicemonform niceform--rounded">
+	/// 	<label for="name">Name:</label>
+	///		<input type="text" id="name">
+	/// </form>
 	.niceform--rounded {
 		input,
 		select,
@@ -112,12 +130,12 @@ FORMS
 		}
 	}
 
-	// CUSTOM CHECKBOX   --------------------------------
-	// Example: 
-	// <div class="checkbox--nice">
-	//		<input type="checkbox" id="sample" name="sample">
-	//		<label for="sample">Sample</label>
-	// </div>
+	/// Custom checkbox
+	/// @example 
+	/// <div class="checkbox--nice">
+	///		<input type="checkbox" id="sample" name="sample">
+	///		<label for="sample">Sample</label>
+	/// </div>
 
 	.checkbox--nice {
 		input[type=checkbox]{
@@ -129,7 +147,7 @@ FORMS
 			position: relative;
 			padding-left: $base-spacing-unit;
 			margin-right: $base-spacing-unit / 2;
-			//font-size: 13px;
+			///font-size: 13px;
 			&:before{
 				content: "";
 				display: inline-block;
@@ -154,12 +172,12 @@ FORMS
 		}
 	}
 
-	 // CUSTOM RADIO   --------------------------------
-	// Example: 
-	// <div class="radio--nice">
-	//		<input type="radio" id="sample" name="sample">
-	//		<label for="sample">Sample</label>
-	// </div>
+	/// Custom radio input
+	/// @example 
+	/// <div class="radio--nice">
+	///		<input type="radio" id="sample" name="sample">
+	///		<label for="sample">Sample</label>
+	/// </div>
 	.radio--nice {
 		input[type=radio] {  
 		    display: none;  
@@ -170,7 +188,7 @@ FORMS
 			position: relative;
 			padding-left: $base-spacing-unit;
 			margin-right: $base-spacing-unit / 2;
-			//font-size: 13px;
+			///font-size: 13px;
 			&:before{
 				content: "";
 				display: inline-block;

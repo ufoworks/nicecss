@@ -1,8 +1,16 @@
-/* 
-------------------------------------------------
-MAIN
-------------------------------------------------
-*/
+////
+/// Main
+/// @group main
+/// @author Nicemondays
+/// @since version 0.1
+////
+*{
+    &,
+    &:before,
+    &:after{
+        @include vendor(box-sizing, border-box);
+    }
+}
 
 body {
 	font-family: getface(brand);

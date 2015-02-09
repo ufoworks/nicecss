@@ -1,12 +1,15 @@
-/* 
-------------------------------------------------
-BUTTONS
-------------------------------------------------
-*/
+////
+/// Buttons
+/// @group buttons
+/// @author Nicemondays
+/// @since version 0.1
+////
 
 @if $use-buttons {
 
-	// BASE BUTTON  --------------------------------
+	/// Base button class
+	/// Reset appareance, border, select and decoration
+	/// Add default transition for all proporties
 	.button {
 		cursor: pointer;
 		-webkit-appearance: none;
@@ -27,6 +30,8 @@ BUTTONS
 		font-family: getface(brand);
 		font-weight: $base-font-weight;
 		@include transition(all .3s ease);
+
+		/// Rounded variation
 		&--rounded {
 			@include rem-space(padding, .5 1);
 			color: getcolor(text, base);
@@ -36,12 +41,14 @@ BUTTONS
 				background-color: getcolor(ui, dark);
 			}	
 		}
+		/// Brand text color variation with underline on event
 		&--brandtext {
 			color: getcolor(brand);
 			@include on-event {
 				text-decoration: underline;
 			}
 		}
+		/// Brand background color variation
 		&--brandbg {
 			background-color: getcolor(brand);
 			@include rem-space(padding, .5 1);
@@ -49,6 +56,7 @@ BUTTONS
 				background-color: getcolor(ui, base);
 			}
 		}
+		/// Underline decoration on event
 		&--underline {
 			@include on-event {
 				text-decoration: underline;

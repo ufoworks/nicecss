@@ -1,13 +1,13 @@
 @if $use-dropmenu {
 	.dropmenu {
-		// Config
+		/// Config
 		$maxheight-target: 150px;
 		$link-paddings: .5 1;
 		$menu-minwidth: 100px;
 		$menu-topmargin: 5px;
 		$animation-speed: .6s;
 		
-		// Styles
+		/// Styles
 		position: relative;
 		&__openbtn {}
 		&__menu {

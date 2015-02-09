@@ -1,67 +1,68 @@
-/* 
-------------------------------------------------
-HELPERS
-------------------------------------------------
-*/
+////
+/// Buttons
+/// @group helpers
+/// @author Nicemondays
+/// @since version 0.1
+////
 
 @if $use-helpers {
 
-	// FLOATS   ------------------------------------
+	/// Floats
 
 	.float--right   { float:right!important; }
 	.float--left    { float:left !important; }
 	.float--none    { float:none !important; }
 
 
-	// TEXT ALIGNMENT   ----------------------------
+	/// Text align
 	 
 	.text--left     { text-align:left  !important; }
 	.text--center   { text-align:center!important; }
 	.text--right    { text-align:right !important; }
 
 
-	// TEXT TRANSFORM   -----------------------------
+	/// Text transform
 	.text--upper 	{ text-transform: uppercase !important;}
 
 
-	// FONT WEIGHT   --------------------------------
+	/// Font weight
 	.weight--light      	{ font-weight:300!important; }
 	.weight--normal     	{ font-weight:400!important; }
 	.weight--semibold   	{ font-weight:600!important; }
 	.weight--bold   		{ font-weight:700!important; }
 
 
-	// FONT STYLED   --------------------------------
+	/// Font styled
 	.text--unitalic 	{ font-style: normal!important; }
 	.decor--none 	    { text-decoration: none!important; }
 
 
-	// POSITIONS     --------------------------------
+	/// Positions
 	.relative       { position: relative!important; }
 	.absolute       { position: absolute!important; }
 	.fixed          { position: fixed!important; }
 
 
-	// VERTICAL POSITIONS     ------------------------
+	/// Vertical aligns
 	.middle     { vertical-align: middle!important; }
 	.bottom     { vertical-align: bottom!important; }
 	.top        { vertical-align: top!important; }
 	.super      { vertical-align: super!important; }
 
 
-	// DISPLAY FORCE     ---------------------------------
+	/// Display modes
 	.inline-block   { display: inline-block!important; }
 	.block          { display: block!important; }
 
 
-	// VISIBILITY     -------------------------------------
+	/// Visibility
 	.invisible      { visibility: hidden!important; }
 	.transparent  	{ @include opacity(0); }
 	.mask           { overflow: hidden; }
 	.hide           { display: none; }
 
 
-	// MARGIN AND PADDINGS     -----------------------------
+	/// Script de parseo de la variable de configuracion $space para generar los space helpers 
 	@each $name, $data in $space {
 		$cont: 1;
 		@each $alias in map-get($data, alias) {
@@ -80,7 +81,10 @@ HELPERS
 		}
 	}
 
-	// COLORS -----------------------------------------------
+	/// Script de parseo de la variable de configuracion $colors para generar los colors helpers
+	/// Se generarán clases de 2 tipos:
+	/// .color--<color name><tone name> que se setea el color del texto
+	/// .bgcolor--<color name><tone name> que setea el color de fondo
 	@each $name, $value in $colors {
 		@if type-of($value) == map {
 			@each $nametone, $valuetone in $value {
@@ -101,27 +105,28 @@ HELPERS
 		}
 	}
 
-	// FACES -----------------------------------------------
+	/// Script de parseo de la variable de configuracion $faces para generar los font helpers
+	/// Esto generará una clase para cada fuente definida con la forma .font--<font name>
 	@each $name, $value in $faces {
 		.font--#{$name} {
 			font: $value;
 		}
 	}
 
-	// SIZES -----------------------------------------------
+	/// Script de parseo de la variable de configuracion $sizes para generar los fontsize helpers
+	/// Esto generará una clase para cada tamaño de fuente definido con la forma .textsize--<size name>
 	@each $name, $value in $sizes {
 		.textsize--#{$name} {
 			@include font-size($value, false);
 		}
 	}
 
-	// CLEARFIX     ---------------------------------------
+	/// Clearfix
 	.clearfix {
 		@include clearfix;
 	}
 
-	// RESPONSIVE VISIBLE CLASS    -----------------------------
-
+	/// Responsive visibility helpers
 	@each $name, $value in $breakpoints {
 		@include respond-to($name) {
 			.visible--#{$name} {

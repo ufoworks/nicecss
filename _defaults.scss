@@ -1,37 +1,44 @@
-/* 
-------------------------------------------------
-BASE
-------------------------------------------------
-*/
+////
+/// Configuration
+/// @author Nicemondays
+/// @since version 0.1
+////
 
+
+/// Se usa como valor inicial en el body y para el cálculo de las unidades rem
+/// @see {function} rem
+/// @see {function} rem-space
 $base-font-size:    16px!default;
+
+/// Se usa para el calculo del line-height armonizado en el mixin font-size
+/// @see {mixin} font-size
 $base-line-height:  24px!default;
 
+/// Default font-weight value
 $base-font-weight: 	400!default;
+
+/// Default round corner value
 $base-round:        4px!default;
 
+/// Variable maestra a través de la cual serán todos los calculos de espacio en el framework
+/// Por defecto esta variable tiene el mismo valor que $base-line-height
+/// @see {function} rem-space
+/// @see {function} space
 $base-spacing-unit: $base-line-height !default;
-$line-height-ratio: $base-line-height / $base-font-size !default;
 
-
-/* 
-------------------------------------------------
-PATHS
-------------------------------------------------
-*/
-
+/// En este mapa definimos las rutas que se usarán para los assets
+/// El primer item del mapa define la ruta base de todos los assets
 $paths: (
 	base: '../assets',
 	fonts: 'fonts',
 	images: 'images'
 )!default;
 
-/* 
-------------------------------------------------
-COLORS
-------------------------------------------------
-*/
-
+/// En esta variable se define el esquema de color del proyecto. Colores base y tonos de color.
+/// Para acceder a estas variables se debe usar la función **getcolor**
+/// Si los helpers están activos se generarán estilos para el color de texto y para el color de fondo
+/// con la siguiente forma **.color--<color><tono>** **.bgcolor--<color><tono>
+/// @see {function} getcolor
 $colors: (
 	brand: red,
 	alt: blue,
@@ -49,55 +56,37 @@ $colors: (
 	) 
 )!default;
 
-/* 
-------------------------------------------------
-FACES
-------------------------------------------------
-*/
-
+/// En esta variable debe guardarse todas las fuentes que se usarán en el proyecto.
+/// Para acceder a estas variables se debe usar la función **getface**
+/// @see {function} getface
 $faces: (
 	brand: sans-serif,
 	alt: serif
 )!default;
 
 
-/* 
-------------------------------------------------
-SIZES
-------------------------------------------------
-*/
-
+/// En esta variable guardamos todos los tamaños de texto maestros del site.
+/// Esto generará los estilos .fontsize--<name>
 $sizes: (
 	title: 24px,
 	bodycopy: 14px
 )!default;
 
-
-/* 
-------------------------------------------------
-BREAKPOINT
-------------------------------------------------
-*/
-
+/// define si usamos max-width o min-width (mobile first) para nuestros breakpoints
 $breakpoint-default-feature:    max-width !default;
+/// Define si se va a convertir los breakpoints a unidades em
 $breakpoint-to-ems:             true !default;
 
-
+/// En este mapa guardamos todos los breakpoints que se usarán con lo liberia **Breakpoint***
+/// Se puede acceder a estos boreakpoint con el mixin respond-to(nombre)
+/// @link <http://breakpoint-sass.com>
 $breakpoints: (
 	mobile: 480px,
 	tablet: 800px
 )!default;
 
 
-
-/* 
-------------------------------------------------
-GRID
-------------------------------------------------
-*/
-
-$gutter:            30px!default;
-
+/// Base grid settings
 $grid-settings: (
 	columns: 12,
 	gutter: 30px
@@ -105,13 +94,9 @@ $grid-settings: (
 
 
 
-/* 
-------------------------------------------------
-SPACE
-------------------------------------------------
-*/
-
-
+/// Esta mapa guarda la configuración que se usara para generar los space helpers. 
+/// Este mapa generará una clase combinando los datos definidos
+/// @example .mb--normal { @include rem-space(margin-bottom, 1); }
 $space: (
 	mb: (
 		prop: margin-bottom,
@@ -128,12 +113,7 @@ $space: (
 )!default;
 
 
-/* 
-------------------------------------------------
-LOADER VARS
-------------------------------------------------
-*/
-
+/// En este mapa se guarda toda la confiración necesaria para pintar el loader css
 $loader: (
 	iscenter: true,
 	dotsize: 15px,
@@ -143,17 +123,21 @@ $loader: (
 )!default;
 
 
-/* 
-------------------------------------------------
-FRAMEWORK SETTINGS
-------------------------------------------------
-*/
+/// Estas variables definen si se incluirán en el framework estas clases. 
 
+/// Define si se incluiran los helpers al exportar
 $use-helpers: 		true !default;
+/// Define si se incluiran los formulario al exportar
 $use-forms: 		true !default;
+/// Define si se incluiran los botones al exportar
 $use-buttons: 		true !default;
+/// Define si se incluiran las listas al exportar
 $use-lists: 		true !default;
+/// Define si se incluira el loader css
 $use-loader: 		true !default;
+/// Define si se incluira el objeto dropmenu
 $use-dropmenu: 		true !default;
+/// Define si se incluira el objeto stackmenu
 $use-stackmenu:		true !default;
+/// Define si se incluira el objeto tabdata
 $use-tabdata:		true !default;

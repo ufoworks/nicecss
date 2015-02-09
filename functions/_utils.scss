@@ -1,7 +1,21 @@
+////
+/// @author Nicemondays
+/// @since version 0.4
+////
+
+
+/// Remove unit from value
+/// @access private
+/// @parameter {number} $value
+/// @return {number} striped value
 @function strip-units($number) {
   @return $number / ($number * 0 + 1);
 }
 
+/// Return a color value from $colors config var
+/// @parameter {string} $scheme - Scheme name
+/// @parameter {string} $tone - Tone name
+/// @return {color} color value
 @function getcolor($scheme, $tone: base) {
 	@if type-of(map-get($colors, $scheme)) == map {
 		@if not map-has-key(map-get($colors, $scheme), $tone) {
@@ -13,20 +27,42 @@
 	}
 }
 
+/// Return a family name from $faces config var
+/// @parameter {string} $type
+/// @return {string | list} font family value
 @function getface($type: brand) {
 	@return map-get($faces, $type);
 }
 
-/// Assets functions
-
+/// Asset URL builder
+/// @author css-tricks
+/// @access private
+/// @param {String} $type - Asset type, matching folder name
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the asset
+/// @since version 1.5
 @function asset($type, $file) {
   @return url(map-get($paths, base) + '/' + map-get($paths, $type) + '/' + $file);
 }
 
+/// Image asset helper
+/// @author css-tricks
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the image
+/// @require {function} asset
+/// @since version 1.5
 @function image($file) {
   @return asset(images, $file);
 }
 
+/// Font asset helper
+/// @author css-tricks
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the font
+/// @require {function} asset
+/// @since version 1.5
 @function font($file) {
   @return asset(fonts, $file);
 }

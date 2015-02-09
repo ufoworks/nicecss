@@ -1,28 +1,43 @@
-/* 
-------------------------------------------------
-FONTS UTILITIES
-------------------------------------------------
-*/
+////
+/// Font utils
+/// @author Nicemondays
+/// @since version 0.1
+////
 
+
+/// Genera una declaración de font-size calculada en rem con un fallback en pixel para navegadores sin soporte
+/// También genera un line-height adecuado para mentaner el ritmo vertical. Este calculo se puede omitir con el uso del segundo parámetro
+/// @parameter {number} $font-size
+/// @parameter {boolean} $line-height - Con true declara un line-height adecuado
+/// @example
+///   @include font-size(25px, false);
 /// @author Harry Roberts
 @mixin font-size($font-size, $line-height:true){
-    font-size:$font-size;
-    font-size:($font-size / $base-font-size)*1rem;
+    font-size: $font-size;
+    font-size: rem($font-size);
     @if $line-height == true{
         line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
     }
 }
 
-@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+
+/// Genera una declaración de @font-face
+/// @parameter {string} $font-family
+/// @parameter {string} $file-name 
+/// @parameter {string} $weight [normal] 
+/// @parameter {string} $style [normal] 
+/// @example
+///   @include font-face('Avenir Next', 'fonts/avenir-next-condensed', 400);
+@mixin font-face($font-family, $file-name, $weight: normal, $style: normal ) {
   @font-face {
     font-family: $font-family;
     font-weight: $weight;
     font-style: $style;
 
-    src: url('#{$file-path}.eot');
-    src: url('#{$file-path}.eot?#iefix')               format('embedded-opentype'),
-         url('#{$file-path}.woff')                     format('woff'),
-         url('#{$file-path}.ttf')                      format('truetype'),
-         url('#{$file-path}.svg##{$font-family}')      format('svg');
+    src: font('#{$file-name}.eot');
+    src: font('#{$file-name}.eot?#iefix')               format('embedded-opentype'),
+         font('#{$file-name}.woff')                     format('woff'),
+         font('#{$file-name}.ttf')                      format('truetype'),
+         font('#{$file-name}.svg##{$font-family}')      format('svg');
   }
 }

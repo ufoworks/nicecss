@@ -1,7 +1,23 @@
+////
+/// @author Nicemondays
+/// @since version 0.4
+////
+
+/// Convert px value to rem
+/// @parameter {number} $value - pixel value
+/// @return {number} rem value
+/// @example
+/// margin-bottom: rem(32px);
 @function rem($value) {
-	@return #{strip-units($value / $base-font-size)}rem;
+	@return strip-units($value / $base-font-size) * 1rem;
 }
 
+/// Multiplica los valores aportados por la variable de configuración global $base-spacing-unit
+/// y lo concierte en unidades rem
+/// @parameter {list} $values
+/// @return {list} rem values
+/// @example
+/// margin: rem-space(1 2 1 2);
 @function rem-space($values) {
 	$result: ();
 	$_value: 0;
@@ -10,13 +26,18 @@
 	  @if $value == auto or $value == 0 {
 	    $_value: $value;
 	  } @else {
-	    $_value: #{strip-units($value * $base-spacing-unit / $base-font-size)}rem;
+	    $_value: rem($value) * strip-units($base-spacing-unit);
 	  }
 	  $result: append($result, $_value);
 	}
 	@return $result;
 }
 
+/// Multiplica los valores aportados por la variable de configuración global $base-spacing-unit
+/// @parameter {list} $values
+/// @return {list} px values
+/// @example
+/// margin: space(1 2 1 2);
 @function space($values) {
 	$result: ();
 	$_value: 0;
@@ -25,7 +46,7 @@
 	  @if $value == auto or $value == 0 {
 	    $_value: $value;
 	  } @else {
-	    $_value: #{strip-units($value * $base-spacing-unit)}px;
+	    $_value: $value * $base-spacing-unit;
 	  }
 	  $result: append($result, $_value);
 	}

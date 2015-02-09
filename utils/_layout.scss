@@ -1,9 +1,18 @@
-/* 
-------------------------------------------------
-LAYOUT UTILITIES
-------------------------------------------------
-*/
+////
+/// Layout utils
+/// @author Nicemondays
+/// @since version 0.1
+////
 
+
+/// Genera un valor en rem con un fallback en px para legacy browsers usando como multiplo el valor $base-spacing-unit
+/// @parameter {string} $property
+/// @parameter {list} $values
+/// @parameter {boolean} $isImportant
+/// @example
+///   @include rem-space(margin, 0 1, true);
+/// @see {function} rem-space
+/// @see {function} space
 @mixin rem-space($property, $values, $isImportant:false) {
   $important: '';
 
@@ -15,6 +24,20 @@ LAYOUT UTILITIES
   #{$property}: rem-space($values)#{$important};
 }
 
+/// Genera el código necesario para propociar un centrado vertical de los hijos
+/// Los hijos del elemento al que se aplique este mixin deben ser inline-block con vertical-align:middle
+/// Se produce un error si el hijo ocupa el 100% del ancho
+/// @example
+///   .parent {
+///     @include ghostVerticalAlign;
+///     .child {
+///       display: inline-block;
+///       vertical-aling: middle;
+///       width: 100px;
+///     }
+///   }
+/// @author css-trick
+/// @link http://css-tricks.com/centering-in-the-unknown/
 @mixin ghostVerticalAlign(){
   &:before {
     content: '';
@@ -24,6 +47,11 @@ LAYOUT UTILITIES
   }
 }
 
+/// Genera listas justicadas en ancho
+/// @example
+///   .ul {
+///     @include justify-list;
+///   }
 @mixin justify-list() {
   text-align: justify;
   font-size: 0.1px;
@@ -38,6 +66,7 @@ LAYOUT UTILITIES
   }
 }
 
+/// Clearfix
 @mixin clearfix() {
   &:after{
     content: "";
@@ -46,12 +75,18 @@ LAYOUT UTILITIES
   }
 }
 
+/// Horizontal centering for block elements
 @mixin center-block {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+/// Absolute center mixin
+/// Use translate for modern browser and margin technique for legacy
+/// @parameter {boolean} $legacy [false]
+/// @parameter {number} $width
+/// @parameter {number} $height
 @mixin absolute-center($legacy:false, $width: 0, $height: 0) {
   position: absolute;
   top: 50%;
@@ -66,6 +101,7 @@ LAYOUT UTILITIES
   }
 }
 
+/// Absolute cover mixin
 @mixin coverer {
   position: absolute;
   top: 0;
@@ -74,6 +110,13 @@ LAYOUT UTILITIES
   height: 100%;
 }
 
+/// Absolute position mixin
+/// Este mixin es un shortcut para el posicionado en absoluto usando rem-space
+/// acepta una lista de argumentos que sigue el orden top - right - bottom - left
+/// @parameter {list} $args
+/// @example
+///   @include absolute(0 1 1 2);
+/// @see {mixin} rem-space
 @mixin absolute($args) {
   $top: nth($args, 1);
   $right: nth($args, 2);

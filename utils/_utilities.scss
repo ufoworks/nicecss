@@ -1,9 +1,13 @@
-/* 
-------------------------------------------------
-UTILITIES
-------------------------------------------------
-*/
+////
+/// Utils
+/// @author Nicemondays
+/// @since version 0.1
+////
 
+/// Truncate mixin genera una ellipsis en el texto
+/// @parameter {number} $truncation-boundary
+/// @example
+///   @include truncate(200px);
 @mixin truncate($truncation-boundary){
     max-width:$truncation-boundary;
     white-space:nowrap;
@@ -11,10 +15,7 @@ UTILITIES
     text-overflow:ellipsis;
 }
 
-@mixin box-emboss($opacity, $opacity2){
-    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
-}
-
+/// Hide text technique. Use this mixin for semantic CSS image replacement
 @mixin hide-text(){
   border: 0;
   font: 0/0 a;
@@ -22,29 +23,28 @@ UTILITIES
   color: transparent;
 }
 
-@mixin image-replacement($url, $w, $h){
+/// Mixin for CSS image replacement.
+/// @parameter {string} $file - Name of image file
+/// @parameter {number} $w - Width of replacement area
+/// @parameter {number} $h - Height of replacement area
+/// @example
+///   @include image-replacement('logo.png', 200px, 100px);
+@mixin image-replacement($file, $w, $h){
   @include hide-text;
-  background: url(#{$url});
-  width: #{$w}px;
-  height: #{$h}px;
+  background: image($file);
+  width: $w;
+  height: $h;
 }
 
-@mixin placeholder($color) {
-  ::-webkit-input-placeholder {
-     color: $color;
-  }
-  :-moz-placeholder { /* Firefox 18- */
-     color: $color;  
-  }
-  ::-moz-placeholder {  /* Firefox 19+ */
-     color: $color;  
-  }
-  :-ms-input-placeholder {  
-     color: $color;  
-  }
-}
 
 /// Based on Event wrapper
+/// @parameter {boolean} $active - If true we add a "active" class
+/// @example
+///   .element {
+///     @include on-event{
+///       color: red;
+///     }
+///   }
 /// @author Harry Roberts
 @mixin on-event($active: false) {
     @if $active {
@@ -63,7 +63,17 @@ UTILITIES
     }
 }
 
-// From <http://sass-guidelin.es/>
+/// Este mixin es un wrapper que sirve para definir nuevas propiedades
+/// que se harán activas si este elemento tiene como padre un elemento con el selector definido
+/// @parameter {string} $selector - Selector of parent element
+/// @example
+///   .element {
+///     @include when-inside(.active){
+///       display: none;
+///     }
+///   }
+/// @author SASS Guidelin
+/// @link <http://sass-guidelin.es/>
 @mixin when-inside($selector) {
   #{$selector} & {
     @content;
