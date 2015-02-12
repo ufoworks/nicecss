@@ -101,7 +101,7 @@
       background: -o-linear-gradient(top,  $startcolor 0%,$endcolor 100%);
       background: -ms-linear-gradient(top,  $startcolor 0%,$endcolor 100%);
       background: linear-gradient(to bottom,  $startcolor 0%,$endcolor 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=0 );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startcolor}', endColorstr='#{$endcolor}',GradientType=0 );
     }
     @else if $orientation == horizontal
     {
@@ -112,7 +112,7 @@
       background: -o-linear-gradient(left,  $startcolor 0%,$endcolor 100%);
       background: -ms-linear-gradient(left,  $startcolor 0%,$endcolor 100%);
       background: linear-gradient(to right,  $startcolor 0%,$endcolor 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=1 );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startcolor}', endColorstr='#{$endcolor}',GradientType=1 );
     }
     @else
     {
@@ -123,7 +123,7 @@
       background: -o-radial-gradient(center, ellipse cover,  $startcolor 0%,$endcolor 100%);
       background: -ms-radial-gradient(center, ellipse cover,  $startcolor 0%,$endcolor 100%);
       background: radial-gradient(ellipse at center,  $startcolor 0%,$endcolor 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$startcolor', endColorstr='$endcolor',GradientType=1 );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startcolor}', endColorstr='#{$endcolor}',GradientType=1 );
     }
 }
 /// Generate a box emboss effect

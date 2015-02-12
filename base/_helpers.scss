@@ -88,18 +88,18 @@
 	@each $name, $value in $colors {
 		@if type-of($value) == map {
 			@each $nametone, $valuetone in $value {
-				.color--#{$name}#{$nametone} {
+				.color--#{""+$name}#{$nametone} {
 					color: $valuetone;
 				}
-				.bgcolor--#{$name}#{$nametone} {
+				.bgcolor--#{""+$name}#{$nametone} {
 					background-color: $valuetone;
 				}
 			}
 		} @else {
-			.color--#{$name} {
+			.color--#{""+$name} {
 				color: $value;
 			}
-			.bgcolor--#{$name} {
+			.bgcolor--#{""+$name} {
 				background-color: $value;
 			}
 		}
