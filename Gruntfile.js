@@ -18,7 +18,8 @@ module.exports = function(grunt) {
     sass:{
       dev: {
         options:{
-          loadPath: ['bower_components/']
+          includePaths: ['bower_components/'],
+          sourceMap: true
         },
         files:{
           'test/css/main.css':'nicecss.scss'
@@ -36,8 +37,9 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-sassdoc');
+  
   // Default task(s).
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('dev', ['sass']);
