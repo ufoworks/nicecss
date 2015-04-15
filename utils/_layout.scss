@@ -129,3 +129,27 @@
   @if $bottom { @include rem-space(bottom, $bottom); };
   @if $left { @include rem-space(left, $left); };
 }
+
+
+/// Force aspect ratio mixin
+/// @parameter {number} $width
+/// @parameter {number} $height
+/// @example
+///   @include aspect-ratio(16, 9, '.inner');
+/// @author css-tricks.com
+@mixin aspect-ratio($width, $height, $child: '.content') {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > #{$child} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

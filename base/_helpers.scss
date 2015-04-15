@@ -109,7 +109,7 @@
 	/// Esto generará una clase para cada fuente definida con la forma .font--<font name>
 	@each $name, $value in $faces {
 		.font--#{$name} {
-			font: $value;
+			font-family: $value;
 		}
 	}
 

@@ -27,10 +27,13 @@
 /// @parameter {string} $file - Name of image file
 /// @parameter {number} $w - Width of replacement area
 /// @parameter {number} $h - Height of replacement area
+/// @parameter {boolean} $hidetext - Hide text in element?
 /// @example
 ///   @include image-replacement('logo.png', 200px, 100px);
-@mixin image-replacement($file, $w, $h){
-  @include hide-text;
+@mixin image-replacement($file, $w, $h, $hidetext: false){
+  @if $hidetext {
+    @include hide-text;
+  }
   background: image($file);
   width: $w;
   height: $h;
@@ -50,14 +53,12 @@
     @if $active {
         &:hover,
         &:active,
-        &:focus,
         &.active {
             @content;
         }
     } @else {
         &:hover,
-        &:active,
-        &:focus {
+        &:active {
             @content;
         }
     }
