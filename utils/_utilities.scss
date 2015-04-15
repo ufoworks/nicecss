@@ -80,19 +80,3 @@
     @content;
   }
 }
-
-
-/// Este mixin es un wrapper que sirve para definir nuevas propiedades
-/// que se harán activas si este elemento cumple además otro selector
-/// @parameter {string} $selector - Selector de la condición
-/// @example
-///   .element {
-///     @include when-is('a'){
-///       text-decoration: none;
-///     }
-///   }
-@mixin when-is($selector) {
-  @at-root #{$selector}#{&} {
-    @content;
-  }
-}
