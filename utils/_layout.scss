@@ -66,6 +66,31 @@
   }
 }
 
+/// Genera listas inline. El primer parámetro hace referencia al tipo de estilo usado para la lista. Pudiendo ser inlineblock o float. El segundo es la separación entre elementos. 
+/// @parameter {string} $mode [float]
+/// @parameter {number} $margin
+/// @example
+///   .ul {
+///     @include inline-list(float,1);
+///   }
+@mixin inline-list($mode: float, $margin: 0.5) {
+  @if $mode == float {
+    @include clearfix;
+  }
+  list-style: none;
+  padding: 0;
+  > li {
+    @if $mode == float {
+      float: left;
+      display: block;
+    } @else {
+      display: inline-block;
+    }
+    @include rem-space(margin-left, $margin);
+    &:first-child { margin-left: 0; }
+  }
+}
+
 /// Clearfix
 @mixin clearfix() {
   &:after{
