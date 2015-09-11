@@ -18,4 +18,17 @@ body {
 	font-weight: $base-font-weight;
 	background-color: getcolor(bgcolor);
 	color: getcolor(text, base);
+	&:before {
+		display: none;
+		content: 'default';
+	}
+}
+
+@each $name, $data in $breakpoints {
+	@include respond-to($name) {
+		body:before {
+			content: '#{$name}';
+			display: none;
+		}
+	}
 }

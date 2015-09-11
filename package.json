@@ -1,6 +1,17 @@
 {
   "name": "NiceCSS",
-  "version": "1.5.2",
+  "version": "1.5.3",
+  "author": "Óscar Montañés <oscar@nicemondays.com>",
+  "main": "nicecss.scss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sosoviak/nicecss"
+  },
+  "license": "MIT",
+  "dependencies":{
+    "breakpoint-sass": "~2.6.1",
+    "sass-flex-mixin": "~1.0.0"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.4.4",
