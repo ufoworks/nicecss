@@ -1,6 +1,8 @@
 {
-  "name": "NiceCSS",
-  "version": "1.5.3",
+  "name": "nicecss",
+  "version": "1.6.0",
+  "description": "A Nicemondays CSS framework",
+  "keyworks": "CSS, framework, sass, Nicemondays",
   "author": "Óscar Montañés <oscar@nicemondays.com>",
   "main": "nicecss.scss",
   "repository": {
@@ -8,14 +10,13 @@
     "url": "https://github.com/sosoviak/nicecss"
   },
   "license": "MIT",
-  "dependencies":{
-    "breakpoint-sass": "~2.6.1",
-    "sass-flex-mixin": "~1.0.0"
+  "dependencies": {
+    "sass-flex-mixin": "^1.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.4.4",
-    "grunt-sass": "^0.18.0",
+    "grunt-sass": "^1.0.0",
     "grunt-sassdoc": "^2.0.0"
   }
 }

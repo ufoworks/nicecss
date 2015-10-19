@@ -23,12 +23,3 @@ body {
 		content: 'default';
 	}
 }
-
-@each $name, $data in $breakpoints {
-	@include respond-to($name) {
-		body:before {
-			content: '#{$name}';
-			display: none;
-		}
-	}
-}

@@ -69,14 +69,6 @@
 			.#{$name}--#{$alias} {
 				@include rem-space(map-get($data, prop), nth(map-get($data, values), $cont));
 			}
-			$responsive: map-get($data, responsive);
-			@each $break in $responsive {
-				@include respond-to(#{$break}) {
-					.#{$break}-#{$name}--#{$alias} {
-						@include rem-space(map-get($data, prop), nth(map-get($data, values), $cont), true);
-					}	
-				}
-			}
 			$cont: $cont + 1;
 		}
 	}
@@ -124,18 +116,6 @@
 	/// Clearfix
 	.clearfix {
 		@include clearfix;
-	}
-
-	/// Responsive visibility helpers
-	@each $name, $value in $breakpoints {
-		@include respond-to($name) {
-			.visible--#{$name} {
-				display: block;
-			}
-			.hide--#{$name} {
-				display: none;
-			}
-		}
 	}
 
 }

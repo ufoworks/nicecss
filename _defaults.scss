@@ -72,27 +72,12 @@ $sizes: (
 	bodycopy: 14px
 )!default;
 
-/// define si usamos max-width o min-width (mobile first) para nuestros breakpoints
-$breakpoint-default-feature:    max-width !default;
-/// Define si se va a convertir los breakpoints a unidades em
-$breakpoint-to-ems:             true !default;
-
-/// En este mapa guardamos todos los breakpoints que se usarán con lo liberia **Breakpoint***
-/// Se puede acceder a estos boreakpoint con el mixin respond-to(nombre)
-/// @link <http://breakpoint-sass.com>
-$breakpoints: (
-	mobile: 480px,
-	tablet: 800px
-)!default;
-
 
 /// Base grid settings
 $grid-settings: (
 	columns: 12,
 	gutter: 30px
 )!default;
-
-
 
 /// Esta mapa guarda la configuración que se usara para generar los space helpers. 
 /// Este mapa generará una clase combinando los datos definidos
@@ -101,14 +86,12 @@ $space: (
 	mb: (
 		prop: margin-bottom,
 		alias: (zero, normal, double, triple, quad),
-		values: (0, 1, 2, 3, 4),
-		responsive: (mobile, tablet)
+		values: (0, 1, 2, 3, 4)
 	),
 	p: (
 		prop: padding,
 		alias: (zero, normal, double, triple, quad),
-		values: (0, 1, 2, 3, 4),
-		responsive: (mobile, tablet)
+		values: (0, 1, 2, 3, 4)
 	)
 )!default;
 

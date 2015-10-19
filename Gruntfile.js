@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     sass:{
       dev: {
         options:{
-          includePaths: ['bower_components/'],
+          includePaths: ['node_modules/'],
           sourceMap: true
         },
         files:{
