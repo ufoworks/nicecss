@@ -34,6 +34,13 @@
 	@return map-get($faces, $type);
 }
 
+/// Return a easing function
+/// @parameter {string} $type
+/// @return {string} easing function
+@function getEasing($type: outCubic) {
+	@return map-get($easing, $type);
+}
+
 /// Asset URL builder
 /// @author css-tricks
 /// @access private
