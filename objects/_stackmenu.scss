@@ -9,7 +9,7 @@
 			color: getcolor(ui);
 			text-decoration: none;
 			border-top: 1px solid getcolor(ui, dark);
-			@include effect(.3s);
+			transition: all .3s;
 		}
 	}
 }

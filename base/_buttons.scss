@@ -29,7 +29,7 @@
 		text-decoration: none;
 		font-family: getface(brand);
 		font-weight: $base-font-weight;
-		@include transition(all .3s ease);
+		transition: all 0.3s ease;
 
 		/// Rounded variation
 		&--rounded {

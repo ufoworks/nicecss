@@ -12,7 +12,7 @@
 		&__openbtn {}
 		&__menu {
 			z-index: 100;
-			@include transition (max-height $animation-speed ease);
+			transition: max-height $animation-speed ease;
 			overflow: hidden;
 			max-height: 0;
 			position: absolute;
