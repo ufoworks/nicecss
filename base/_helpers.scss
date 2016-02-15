@@ -57,7 +57,7 @@
 
 	/// Visibility
 	.invisible      { visibility: hidden!important; }
-	.transparent  	{ @include opacity(0); }
+	.transparent  	{ opacity: 0; }
 	.mask           { overflow: hidden; }
 	.hide           { display: none; }
 
