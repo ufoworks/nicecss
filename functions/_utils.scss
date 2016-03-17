@@ -41,6 +41,13 @@
 	@return map-get($easing, $type);
 }
 
+/// Return a fontsize
+/// @parameter {string} $type
+/// @return {number} fontsize
+@function getFontSize($type: bodycopy) {
+	@return map-get($sizes, $type);
+}
+
 /// Asset URL builder
 /// @author css-tricks
 /// @access private
