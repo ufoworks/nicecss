@@ -10,58 +10,21 @@
 	/// Base button class
 	/// Reset appareance, border, select and decoration
 	/// Add default transition for all proporties
-	.button {
+	.btn {
 		cursor: pointer;
 		-webkit-appearance: none;
 		outline: none;
-		-webkit-box-shadow: none;
 		box-shadow: none;
 		border: 0;
 		display: inline-block;
 		line-height: normal;
 		vertical-align: baseline;
 		cursor: pointer;
-		-webkit-user-drag: none;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
 		user-select: none;
 		text-decoration: none;
 		font-family: getface(brand);
 		font-weight: $base-font-weight;
 		transition: all 0.3s ease;
-
-		/// Rounded variation
-		&--rounded {
-			@include rem-space(padding, .5 1);
-			color: getcolor(text, base);
-			background-color: getcolor(ui, base);
-			border-radius: $base-round;
-			@include on-event{
-				background-color: getcolor(ui, dark);
-			}	
-		}
-		/// Brand text color variation with underline on event
-		&--brandtext {
-			color: getcolor(brand);
-			@include on-event {
-				text-decoration: underline;
-			}
-		}
-		/// Brand background color variation
-		&--brandbg {
-			background-color: getcolor(brand);
-			@include rem-space(padding, .5 1);
-			@include on-event {
-				background-color: getcolor(ui, base);
-			}
-		}
-		/// Underline decoration on event
-		&--underline {
-			@include on-event {
-				text-decoration: underline;
-			}
-		}
 	}
 	
 }
