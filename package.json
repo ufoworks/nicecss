@@ -10,13 +10,11 @@
     "url": "https://github.com/sosoviak/nicecss"
   },
   "license": "MIT",
-  "dependencies": {
-    "sass-flex-mixin": "^1.0.0"
-  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.4.4",
     "grunt-sass": "^1.0.0",
     "grunt-sassdoc": "^2.0.0"
-  }
+  },
+  "dependencies": {}
 }
