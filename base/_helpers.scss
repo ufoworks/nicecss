@@ -62,17 +62,6 @@
 	.hide           { display: none; }
 
 
-	/// Script de parseo de la variable de configuracion $space para generar los space helpers 
-	@each $name, $data in $space {
-		$cont: 1;
-		@each $alias in map-get($data, alias) {
-			.#{$name}--#{$alias} {
-				@include rem-space(map-get($data, prop), nth(map-get($data, values), $cont));
-			}
-			$cont: $cont + 1;
-		}
-	}
-
 	/// Script de parseo de la variable de configuracion $colors para generar los colors helpers
 	/// Se generarán clases de 2 tipos:
 	/// .color--<color name><tone name> que se setea el color del texto

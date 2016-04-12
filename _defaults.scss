@@ -79,23 +79,6 @@ $grid-settings: (
 	gutter: 30px
 )!default;
 
-/// Esta mapa guarda la configuración que se usara para generar los space helpers. 
-/// Este mapa generará una clase combinando los datos definidos
-/// @example .mb--normal { @include rem-space(margin-bottom, 1); }
-$space: (
-	mb: (
-		prop: margin-bottom,
-		alias: (zero, normal, double, triple, quad),
-		values: (0, 1, 2, 3, 4)
-	),
-	p: (
-		prop: padding,
-		alias: (zero, normal, double, triple, quad),
-		values: (0, 1, 2, 3, 4)
-	)
-)!default;
-
-
 
 /// Estas variables definen si se incluirán en el framework estas clases. 
 
