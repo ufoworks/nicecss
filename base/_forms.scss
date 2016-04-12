@@ -21,7 +21,7 @@
 			@include rem-space(padding, .5 1);
 			background-color: #ccc;
 			border: 0;
-			@include transition(all .4s ease);
+			transition: all .4s ease;
 		}
 		input:focus,
 		select:focus,
@@ -155,11 +155,11 @@
 				height: 14px;
 				margin-right: 10px;
 				position: absolute;
-				@include border-radius(2px);
+				border-radius: 2px;
 				left: 0;
 				top:4px;
 				background-color: #ccc;
-				@include box-shadow(0,0,4px,rgba(0, 0, 0, 0.1),inset);
+				box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
 			}
 		}
 		input[type=checkbox]:checked + label:before{
@@ -199,7 +199,7 @@
 				left: 0;
 				margin-bottom: 1px;
 				background-color: #ccc;
-				@include border-radius(7px);
+				border-radius: 7px;
 				border: 1px solid #666;
 				box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .1);
 			}
