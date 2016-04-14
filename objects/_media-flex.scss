@@ -1,0 +1,26 @@
+.media-flex {
+  display: flex;
+  > .image {
+    margin-right: rem-space(1);
+  }
+  &.-center {
+    align-items: center;
+  }
+  &.-rev {
+    > .image {
+      margin-right: 0;
+      margin-left: rem-space(1);
+    }
+  }
+  &.-compress {
+    > .image {
+      margin-right: rem-space(0.5);
+    }
+    &.-rev {
+      > .image {
+        margin-right: 0;
+        margin-left: rem-space(0.5);
+      }
+    }
+  }
+}
