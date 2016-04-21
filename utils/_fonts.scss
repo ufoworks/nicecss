@@ -26,19 +26,27 @@
 /// @parameter {string} $file-name 
 /// @parameter {string} $weight [normal] 
 /// @parameter {string} $style [normal] 
+/// @parameter {boolean} $modern [false] include woff2
 /// @example
 ///   @include font-face('Avenir Next', 'fonts/avenir-next-condensed', 400);
-@mixin font-face($font-family, $file-name, $weight: normal, $style: normal ) {
+@mixin font-face($font-family, $file-name, $weight: normal, $style: normal, $modern: false ) {
   @font-face {
     font-family: $font-family;
     font-weight: $weight;
     font-style: $style;
 
     src: font('#{$file-name}.eot');
-    src: font('#{$file-name}.eot?#iefix')               format('embedded-opentype'),
-         font('#{$file-name}.woff2')                    format('woff2'),
-         font('#{$file-name}.woff')                     format('woff'),
-         font('#{$file-name}.ttf')                      format('truetype'),
-         font('#{$file-name}.svg##{$font-family}')      format('svg');
+    @if $modern {
+      src: font('#{$file-name}.eot?#iefix')               format('embedded-opentype'),
+           font('#{$file-name}.woff2')                    format('woff2'),
+           font('#{$file-name}.woff')                     format('woff'),
+           font('#{$file-name}.ttf')                      format('truetype'),
+           font('#{$file-name}.svg##{$font-family}')      format('svg');
+    } @else {
+      src: font('#{$file-name}.eot?#iefix')               format('embedded-opentype'),
+           font('#{$file-name}.woff')                     format('woff'),
+           font('#{$file-name}.ttf')                      format('truetype'),
+           font('#{$file-name}.svg##{$font-family}')      format('svg');
+    }
   }
 }
