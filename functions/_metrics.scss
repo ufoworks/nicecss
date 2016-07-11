@@ -52,3 +52,12 @@
 	}
 	@return $result;
 }
+
+/// px to em function
+/// @parameter {number} $pixels
+/// @return {number} em value
+/// @example
+/// font-size: em(12px);
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}

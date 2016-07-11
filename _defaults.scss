@@ -4,6 +4,8 @@
 /// @since version 0.1
 ////
 
+/// Default browser font-size;
+$browser-context: 16px !default;
 
 /// Se usa como valor inicial en el body y para el cálculo de las unidades rem
 /// @see {function} rem
@@ -72,6 +74,14 @@ $sizes: (
 	bodycopy: 14px
 )!default;
 
+/// Responsive configuration
+$responsive-feature: 'max-width' !default;
+$responsive-to-ems: true !default;
+/// Breakpoints definitions
+$breakpoints: (
+	mobile: 700px,
+	tablet: 1000px
+)!default;
 
 /// Base grid settings
 $grid-settings: (

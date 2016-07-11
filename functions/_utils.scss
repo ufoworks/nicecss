@@ -80,3 +80,11 @@
 @function font($file) {
   @return asset(fonts, $file);
 }
+
+/// Return a breakpoint size from $breakpoints config var
+/// @parameter {string} $type
+/// @return {string | list} breakpoint size
+@function getBreakpoint($type: mobile) {
+	@return map-get($breakpoints, $type);
+}
+

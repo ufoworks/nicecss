@@ -1,0 +1,20 @@
+////
+/// Responsive utils
+/// @author Nicemondays
+/// @since version 1.10.1
+////
+
+
+/// Genera una media querie sacándo el valor del mapa breakpoints
+/// @parameter {string} $breakpoint
+/// @example
+///   @include respond-to(mobile) {}
+@mixin respond-to($breakpoint) {
+	$size: getBreakpoint($breakpoint);
+	@if $responsive-to-ems {
+		$size: em($size);
+	}
+	@media (#{$responsive-feature}: #{$size}) {
+		@content;
+	}
+} 
