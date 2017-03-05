@@ -30,7 +30,8 @@ module.exports = function(grunt) {
       default: {
         src: ['*.scss','**!(bower_components)/*.scss'],
         options: {
-          dest: 'docs'
+          dest: 'docs',
+          theme: 'flippant'
         }
       }
     }

@@ -11,10 +11,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.4.4",
-    "grunt-sass": "^1.0.0",
-    "grunt-sassdoc": "^2.0.0"
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-sassdoc": "^2.0.2",
+    "sassdoc-theme-flippant": "^0.1.0"
   },
   "dependencies": {}
 }
