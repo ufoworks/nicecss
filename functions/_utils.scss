@@ -85,6 +85,10 @@
 /// @parameter {string} $type
 /// @return {string | list} breakpoint size
 @function getBreakpoint($type: mobile) {
-	@return map-get($breakpoints, $type);
+	@if not map-has-key($breakpoints, $type) {
+	    @warn "Key `#{$type}` not found in $breakpoints map.";
+	} @else {
+		@return map-get($breakpoints, $type);
+	}
 }
 
