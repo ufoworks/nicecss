@@ -1,8 +1,8 @@
 NiceCSS
 ========
 
-The awesome and nice CSS framework  
-[Documentation](http://sosoviak.github.io/nicecss/)
+The awesome and nice CSS framework
+[Documentation](http://ufoworks.github.io/nicecss/)
 
 #NUEVO
 - Añadido el mixin para responsive font de @eduardoboucas
